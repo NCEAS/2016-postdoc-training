@@ -1,9 +1,7 @@
 ---
-layout: lesson
-root: ../..
-title: Servers and Networks
-author: "Matt Jones"
-date: "July 21, 2014"
+title: "Servers and Networks"
+author: "Julien Brun, Mark Schildhauer"
+date: "June, 2016"
 output: ioslides_presentation
 ---
 
@@ -110,7 +108,7 @@ output: ioslides_presentation
 ### We will use this later:
 
 ```bash
-$ ssh isis.nceas.ucsb.edu
+$ ssh aurora.nceas.ucsb.edu
 ```
 
 
