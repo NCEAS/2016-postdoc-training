@@ -3,11 +3,11 @@
 ## Data Structures
 
 
-|     | Homogeneous    | Heterogeneous |
-| --- | -------------  | ------------- |
-| 1d  | Atomic vector  | List          |
-| 2d  | Matrix         | Data frame    |
-| nd  | Array          |               |
+|  Dimension   | Homogeneous    | Heterogeneous |
+| ------------ | -------------  | ------------- |
+| 1d           | Atomic vector  | List          |
+| 2d           | Matrix         | Data frame    |
+| nd           | Array          |               |
 
 	
 ```str()``` is short for *structure* and it gives a compact, human readable description of any R data structure.
@@ -21,14 +21,14 @@ Vectors have three common properties:
  * Attributes, attributes(), additional arbitrary metadata.
 
 
-#### Atomic vector
+#### a. Atomic vector
 
 You construct an atomic vector using ```c() ```.
 
 All elements of an atomic vector must be the same type, so when you attempt to combine different types they will be **coerced** to the most flexible type. Types from least to most flexible are: logical, integer, double, and character.
 
 
-#### List
+#### b. List
 
 You construct an atomic vector using ```list() ```.
 
@@ -57,5 +57,9 @@ A data frame is the **most common way of storing data** in R. A data frame is in
 
 
 
-
+# References
+- best practices:
+  - Hadley Wickham: http://adv-r.had.co.nz/Style.html 
+  - software carpentry: http://swcarpentry.github.io/r-novice-inflammation/06-best-practices-R.html
+  - Google R style guide; a little bit outdated: https://google.github.io/styleguide/Rguid…
 
