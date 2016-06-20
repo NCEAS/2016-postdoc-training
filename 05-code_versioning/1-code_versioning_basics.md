@@ -17,7 +17,7 @@ For scientists, git is a useful tool to help you to track changes you make to yo
 
 <img style="float: right;width: 100px;" src="images/git_icon.png">
 
-![xkcd - git](http://imgs.xkcd.com/comics/git.png)
+![xkcd - git](images/git_xkcd.png)
 
 Git is a *free* and *open source* distributed *version control system*. It has many functionalities and was originally geared towards software development and production environment. In fact, Git was initially designed and developed in 2005 by Linux kernel developers (including Linus Torvalds) for Linux kernel development. Here is a [fun video](https://www.youtube.com/watch?v=4XpnKHJAok8) of Linus Torvalds touting git to Google. Git can be enabled on a specific folder on your filesystem to version files (including sub-directories) within that directory. In git (and other versions control systems) terms, this “tracked folder” is called repository (which formally is a specific data structure storing versioning information).
 
