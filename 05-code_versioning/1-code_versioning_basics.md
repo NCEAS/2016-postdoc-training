@@ -1,4 +1,4 @@
-# Code versioning - Git
+# Code versioning - Git Basics
 
 
 ## Why do I need that again?
@@ -101,6 +101,15 @@ mkdir git_nceas
 cd git_nceas
 mkdir snapp_workshop
 git init
+```
+
+```git clone``` to copy an existing repository to your machine, more precisely adding the repository in the directory you are in.
+
+```
+cd 
+mkdir git_nceas
+cd git_nceas
+git clone https://github.nceas.ucsb.edu/Training/postdoc-training.git
 ```
 
 ## Tracking your changes
