@@ -9,10 +9,13 @@ This intensive 4-day workshop on Computational and Collaboration Skills for Inte
 * Familiarize and instruct researchers in the use of NCEAS (and other) cyberinfrastructures and services
 * Clarify and reinforce commitment to open science
  
+
+### Agenda https://docs.google.com/document/d/1iiQk9lGyFo8T_JW8wLIaLPfeaZ2sNi7pn7Df-BTClYI/edit
+
 # Modules
 
 order  |  Module Name  |  Preparation Status
 ------ |  -----------  |  ----------------- 
 00     |  Introduction |  Need to be created
-01  |  [Command Line](01-command_line/)  |  Need to be adapted from OSS    
+01  |  [Command Line](01-command_line/01-command-line)  |  Need to be adapted from OSS    
 02  |  
