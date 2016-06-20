@@ -10,7 +10,9 @@ This intensive 4-day workshop on Computational and Collaboration Skills for Inte
 * Clarify and reinforce commitment to open science
  
 
-### Agenda https://docs.google.com/document/d/1iiQk9lGyFo8T_JW8wLIaLPfeaZ2sNi7pn7Df-BTClYI/edit
+### Agenda 
+
+https://docs.google.com/document/d/1iiQk9lGyFo8T_JW8wLIaLPfeaZ2sNi7pn7Df-BTClYI/edit
 
 # Modules
 
