@@ -15,8 +15,8 @@ This intensive 4-day workshop on *Computational and Collaboration Skills for Int
 order  |  Module Name  |  Lesson  |  Preparation Status
 ------ |  -----------  |  -------- |  ------------------ 
 00     |  Introduction |  Introduction  | Need to be created
-01  | Command line  |  [01-command Line](01-command_line/01-command-line.md)  |  Need to be adapted from OSS 
-01  | Command line  |  [02-vim](01-command_line/02-vim.md)  |  Ready to be reused    
+01  | Command line  |  [01-command Line](01-command_line/1-command-line.md)  |  Need to be adapted from OSS 
+01  | Command line  |  [02-vim](01-command_line/2-vim.md)  |  Ready to be reused    
 02  | 
 03  | 
 04  | 
