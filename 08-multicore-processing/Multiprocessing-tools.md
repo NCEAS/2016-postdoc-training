@@ -169,4 +169,5 @@ See script in annexe for example. Try the same challenge: Can you improve its sy
 
 
 ### Python
-- official documentation: https://docs.python.org/2/library/multiprocessing.html
+- Official documentation: https://docs.python.org/2/library/multiprocessing.html
+- Good overview of the different options: http://spartanideas.msu.edu/2014/06/20/an-introduction-to-parallel-programming-using-pythons-multiprocessing-module/
