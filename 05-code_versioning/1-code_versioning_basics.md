@@ -3,15 +3,19 @@
 
 ## Why do I need that again?
 
-Well le's start with a greate ![user case](http://www.phdcomics.com/comics/archive.php?comicid=1531) for motivation.
+Well let's start with a great example:
+
+![http://www.phdcomics.com/comics/archive.php?comicid=1531](images/phd_comics_final.png) 
 
 
-To **keep track of changes you made to your scripts**. Code versiong allows to choose when you reached a stage in your code that you think is worth keep trace of, like a new function that makes your data analysis soooooo much better. 
+So git is very useful to **keep track of changes you made to your scripts**. Code versiong allows to choose when you reached a stage in your code that you think is worth keep trace of, like a new function that makes your data analysis soooooo much better. 
 For scientists, git is a useful tool to help you to track changes you make to your scripts and enable you to share your codes with your collaborators. For example, if you break your code git can help you to revert to an earlier working version. Want one of your collaborators to add a feature to your code to do a specific analysis? Git can help you to do so in a smooth and organized manner.
 
-<img style="float: right;width: 100px;" src="images/git_icon.png">
+
 
 ## What is git?
+
+<img style="float: right;width: 100px;" src="images/git_icon.png">
 
 ![xkcd - git](http://imgs.xkcd.com/comics/git.png)
 
