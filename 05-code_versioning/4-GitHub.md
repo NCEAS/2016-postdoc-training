@@ -7,15 +7,6 @@ You might also have heard of [GitHub](https://github.com). GitHub is a company t
 * **NCEAS on GitHub.com**: https://github.com/nceas
 * **NCEAS GitHub**: https://github.nceas.ucsb.edu/ ([you need to request access](https://help.nceas.ucsb.edu/git#getting_started_nceas_github_instance_using_rstudio))
 
-## Forking
-
-A **fork** is a **copy of a repository**. Forking a repository allows you to freely experiment with changes without affecting the original project.
-
-Most commonly, forks are used to either propose changes to someone else's project or to use someone else's project as a starting point for your own idea.
-
-When you are satisified with your work, you can intiate a ***Pull Request*** to initiate discussion about your modifications. Your commit hisotry allows the original repository administrators to see exactly what changes would be merged if they accept your request.  
-
-By using GitHub's @mention system in your Pull Request message, you can ask for feedback from specific people or teams.
 
 ## NCEAS GitHub Instance
 
@@ -70,6 +61,17 @@ LOGIN: the instance uses NCEAS LDAP authentication (same as redmine, …). If y
 * Select your team ![image alt text](images/image_13.png)
 
 * Select the appropriate Permission level ![image alt text](images/image_14.png)We recommend Admin or Write
+
+## Forking
+
+A **fork** is a **copy of a repository**. Forking a repository allows you to freely experiment with changes without affecting the original project.
+
+Most commonly, forks are used to either propose changes to someone else's project or to use someone else's project as a starting point for your own idea.
+
+When you are satisified with your work, you can intiate a ***Pull Request*** to initiate discussion about your modifications. Your commit hisotry allows the original repository administrators to see exactly what changes would be merged if they accept your request.  
+
+By using GitHub's @mention system in your Pull Request message, you can ask for feedback from specific people or teams.
+
 
 # References
 - GitHub:
