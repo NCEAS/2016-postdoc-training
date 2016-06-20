@@ -14,5 +14,5 @@ This intensive 4-day workshop on Computational and Collaboration Skills for Inte
 order  |  Module Name  |  Preparation Status
 ------ |  -----------  |  ----------------- 
 00     |  Introduction |  Need to be created
-01  |  Command Line  |  Need to be adapted from OSS    
+01  |  [Command Line](01-command_line/)  |  Need to be adapted from OSS    
 02  |  
