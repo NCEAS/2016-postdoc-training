@@ -12,7 +12,7 @@ No, you don't have to. There are low hanging fruits available to you to take adv
 ## R
 To do multiprocessing you need to have multiple cores/CPUs available on you machine. If you do not know how many cores are available to you, you can use this:
 
-```{r}
+```r
 library(doParallel)
 detectCores()
 ```
@@ -54,7 +54,7 @@ We are going to download the shapefiles produced by the [United States Drought M
 
 ![](images/Drought_Monitoring_example.png)
 
-```{r}
+```r
 # libraries
 #install.packages(downloader)
 library(downloader)
@@ -67,7 +67,7 @@ registerDoParallel(cl)
 
 
 # set your working directory
-setwd("~/GitHubnceas/SNAPP/postdoc-training/08_multicore_processing")
+setwd("~/GitHubnceas/SNAPP/postdoc-training/08-multicore-processing")
 
 # create a data folder in it (handles the case where the folder already exists)
 dir.create("data", showWarnings = F)
@@ -122,6 +122,28 @@ As a team of 2 take 15min to make this code better adopting the best practices w
 
 ## Python
 
+### Multiprocessing module
+
+Simlarly in Python there is a specific module that help to implement [multiprocessing]().
+
+```python
+# Import the modules
+import os
+import requests
+import multiprocessing
+
+# Set the number of threads
+#nb_proc = multiprocessing.cpu_count()/2 #use half of the cores
+nb_proc = 4
+pool = multiprocessing.Pool(nb_proc)
+
+# Running a fuction using mulitprocessing
+test = pool.map(my_function,my_list_of_parameters) #in the example above, filenames
+
+```
+
+See script in annexe for example. Try the same challenge: Can you improve its syntax?
+
 ## General Notes: 
 - This implementation is only possible when the iterations in the for loop are independant from each others, meaning there is dependacny of the foloopwing iteration to the result of the preivous one.
 - The RAM of the server is shared accross the different processes running, it can be a limitation to the number of cores you can use if you are working with large data (on one machine).
@@ -147,4 +169,4 @@ As a team of 2 take 15min to make this code better adopting the best practices w
 
 
 ### Python
-
+- official documentation: https://docs.python.org/2/library/multiprocessing.html
