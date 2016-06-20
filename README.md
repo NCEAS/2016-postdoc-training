@@ -30,7 +30,7 @@ order  |  Module Name  |  Lesson  |  Preparation Status
 06  |
 06  | 
 07  | 
-08  | 
+08  |  Using multiple cores | [08-multicore-processing](08-multicore-processing/multiprocessing-tools.md)
 09  | 
  
 
