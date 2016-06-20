@@ -20,7 +20,7 @@ order  |  Module Name  |  Lesson  |  Preparation Status
 02  | 
 03  | 
 04  | 
-05  | Code Versioning  | [1-code\_versioning\_basics](1-code_versioning_basics.md) | **Ready to be reviewed**
+05  | Code Versioning  | [1-code\_versioning\_basics](05-code_versioning/1-code_versioning_basics.md) | **Ready to be reviewed**
 05  |
 06  |
 06  |
