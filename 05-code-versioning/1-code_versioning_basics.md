@@ -131,7 +131,7 @@ Git has a lot of terms and commands, see reference at the end of this document f
 
 ### Unstage a file
 
-```git reset HEAD``` let you remove a file from the staging area
+```git reset HEAD``` lets you remove a file from the staging area
 
 ```
 git reset HEAD <my_file_I_added_by_mistake.xls>
@@ -144,7 +144,7 @@ This will remove the file from your next commit. Can be used to undo an erronous
 
 ```
 git add <missing_script.R>
-git commit --ammed -m "My new message"
+git commit --amend -m "My new message"
 ```
 
 More info about how to undo things [here](https://git-scm.com/book/en/v2/Git-Basics-Undoing-Things)
