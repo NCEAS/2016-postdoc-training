@@ -1,6 +1,6 @@
 ---
 title: "Servers and Networks"
-author: "Julien Brun, Mark Schildhauer"
+author: "Adapted from Matt JOnes by Julien Brun, Mark Schildhauer"
 date: "June, 2016"
 output: ioslides_presentation
 ---
@@ -72,7 +72,7 @@ Few advantages of working remote:
 * IP numbers can be difficult to remember, so also assign hostnames
     - Handled through the global Domain Name System (DNS)
     - Clients first look up a hostname in DNS to find the IP Number
-    - isis.nceas.ucsb.edu -> 128.111.220.46
+    - aurora.nceas.ucsb.edu -> 128.111.84.17
     - Then they open a connection to the IP Number
 
 
