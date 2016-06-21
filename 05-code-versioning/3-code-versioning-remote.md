@@ -145,4 +145,3 @@ Done with your branch? Want to merge your new - ready for prime time - script to
  - 	interactive tutorial on branches: http://pcottle.github.io/
 - git workflow options:
  -  unsing git in a collaborative environment: https://www.atlassian.com/git/tutorials/comparing-workflows/centralized-workflow 
- -  
