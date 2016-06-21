@@ -1,4 +1,4 @@
-# Computational & collaboration skills for integrative conservation science workdshop
+# Computational & collaboration skills for integrative conservation science workshop
 
 This intensive 4-day workshop on *Computational and Collaboration Skills for Integrative Conservation Science* held at NCEAS from June 27th to 30th aims to help participants to:
 
@@ -29,12 +29,13 @@ order  |  Module Name  |  Lesson  |  Preparation Status
 05  | Code Versioning  | [Git from RStudio](05-code-versioning/2-getting-started-with-git-in-RStudio.md) | **Ready to be reviewed**
 05  | Code Versioning  | [Git remotes](05-code-versioning/3-code-versioning-remote.md) | **Ready to be reviewed**
 05  | Code Versioning  | [GitHub](05-code-versioning/4-github.md) | **Ready to be reviewed**
-06  |
-06  |
-06  | 
+06  | Code best Practices |  
 07  | Introduction to Python | [quick dive into Python](07-intro_Python/1-quick-dive-into-python.md) |
 08  |  Using multiple cores | [08-multicore-processing](08-multicore-processing/1-multiprocessing-tools.md) | **Ready to be reviewed**
-09  | 
+09  | Intro to geospatial | |
+10  | Open Science | |
+11  | Semantics | |
+12  | Data visualization | |
  
 
 ## License
