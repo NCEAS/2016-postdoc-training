@@ -70,7 +70,7 @@ There are many python oriented IDE out [there](https://wiki.python.org/moin/Inte
 
 There are few fundamental differences that a R user starting Python should know:
 
-- Indentation in your code matters in Python; it moslty replaces {} in R
+- Indentation in your code matters in Python; it mostly replaces {} in R
 - R Package equivalent is called module. Although the import of the module is pretty similar, in Python modules need to be installed from outside Python
 - In Python, ```.``` is an operator (as in other object-oriented programming languages), not a "space filler" like in R. Do not use ```.``` in names! [more here](https://www.codecademy.com/en/forum_questions/5170307264a7402d9a0012f5)
 - "<-" does not exists in Python
@@ -537,7 +537,7 @@ or
 
 # Few Words about Python Syntax
 
-## Identation
+## Indentation
 **Code blocks are defined by their indentation**. By "code block", I mean functions, if statements, for loops, while loops, and so forth. Indenting starts a block and unindenting ends it. They have no explicit begin or end, and no curly braces to mark where the function code starts and stops. The only delimiter is a colon (:) and the indentation of the code itself.
 
 ## What is this ```if __name__=='__main__':``` !?!
@@ -656,7 +656,7 @@ What is your quest?  It is to seek the holy grail.
 What is your favorite color?  It is blue.
 ```
 
-##While loops
+##Be careful while using while loops
 While loops can be used to loop through a process until a condition is fulfilled
 
 
@@ -671,11 +671,7 @@ While loops can be used to loop through a process until a condition is fulfilled
 2
 1
 ```
-It's easy to make infinite loops with while
----
-
-
-### *if ... else*
+##*if ... else* (conditional statement)
 
 ```python
 >>> x = int(raw_input("Please enter an integer: "))
@@ -692,10 +688,10 @@ Please enter an integer: 42
 ...
 More
 ```
-##elif
+##elif Statements
 There can be zero or more elif parts, and the else part is optional. The keyword ‘elif‘ is short for ‘else if’, and is useful to avoid excessive indentation. An if ... elif ... elif ... sequence is a substitute for the switch or case statements found in other languages.
 
-### *break* and *continue* Statements
+## *break* and *continue* Statements
 
 *break* can be used to exit a loop on a condition
 
