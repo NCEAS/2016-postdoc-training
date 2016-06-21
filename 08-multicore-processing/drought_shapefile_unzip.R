@@ -1,5 +1,7 @@
 # libraries
-#install.packages(downloader)
+#install.packages('downloader')
+#install.packages('foreach')
+#install.packages('doParallel')
 library(downloader)
 library(foreach)
 library(doParallel)
