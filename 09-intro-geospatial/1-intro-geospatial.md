@@ -12,38 +12,36 @@
         - info about spatial relationships among them
     - ...and therefore we can:
         - visualize the data in map form ("layers")
-        - combine date based on shared location
+        - combine data based on shared location
         - Do analyses that exploit spatial relationships
 
 # Digital representations of spatial data
 
-## 1. Vector
-## 2. Raster
-
-# Vector data
+# 1. Vector data
 
 * Conceptually, a set of discrete objects
 * Simplified representation:
     - Points (rain gauges, animal capture locations)
     - Lines (continuous transects, streams, roads)
     - Polygons (watersheds, patches, species ranges)
-* Each 'object' can have multiple attributes
+* Each 'object' can have multiple attributes (e.g., a road has length, number of lanes, speed limit)
 * Topology _may_ be explicit and enforced
     - linear networks, polygon adjacency
 
-# Raster data
+# 2. Raster data
 
 * Conceptually, a 'field' view of the world
 * Simplified representation
     - Regular grid, typically one value per cell ("pixel")
     - e.g. satellite imagery, digital terrain, interpolated surfaces
 * Each pixel usually has a single-valued attribute
-    - binary, categorical, continues, etc
+    - binary, categorical, continuous, etc
 * Topology is implicitly defined
+
 
 # Map projections
 
-* Representing the curved Earth in 2D
+* Representing the 3D (spheroid) Earth in 2D
     - Imagine flattening a ping-pong ball
 
 * Why?
@@ -60,7 +58,7 @@
 # Map projections
 
 * Choice of projection involves trade-offs
-    - Preserve shape? or area?
+    - Preserve shape? Or area?
     - Over what map extent?
 * Also need to choose coordinate system
     - Where is the origin?
@@ -80,7 +78,7 @@
 
 * You need to know the projection of your data!
 * Changing projections:
-    - Some software can project "on the fly"
+    - Some software (e.g., ArcGIS) can project "on the fly"
         - convenient, but can cause confusion
     - Software for reprojection
     - Vector: trivial
@@ -108,18 +106,18 @@
 **Datum**: Links coordinates on a reference geoid with actual locations
 on earth
 
-* WGS84, NAD83 both common
+* WGS84 (World Geodetic System 1984), NAD83 (N. American Datum 1983) both common
     - Align to within 1m of each other
-    - Both are based on GRS80
+    - Both are based on GRS80 (Geodetic Reference System 1980)
 * Older spatial data may use older datums
 * Local datums provide more accuracy in given place
     - but probably more than you'll ever need!
 
 * **Caution**: Interpreting location using the wrong datum can result
-  in positional error of up to 100's of meters!
+  in positional error of up to 100s of meters!
 
 # Using the wrong datum
-
+WGS84 vs. NAD27
 ![](images/wgs84-vs-nad27.png)
 
 
@@ -136,8 +134,8 @@ on earth
 > * **ESRI Shapefile**: multi-file format
 * **KML**: XML-based format popularized by Google
 * **ESRI Personal GeoDatabase**: extends Access databases (ick!)
-* CSV??? (at least for point data...)
-* [many other lesser known](http://www.gdal.org/ogr/ogr_formats.html)
+* CSV??? (at least for point data with XY coordinates...)
+* [many other lesser known](http://www.gdal.org/ogr_formats.html)
 
 # Data storage formats -- rasters
 
@@ -145,4 +143,4 @@ on earth
 * **GeoTIFF**: binary image format with geo metadata
 * **Arc/Info binary grid**: proprietary binary format, multi-file
 * **NetCDF**: flexible container for array data
-* _**many others**_: img, bil, grib, [lots more](http::/http://www.gdal.org/formats_list.html)
+* _**many others**_: img, bil, grib, [lots more](http://www.gdal.org/formats_list.html)
