@@ -1,0 +1,188 @@
+---
+title: "Short Introduction to R"
+author: "brun@nceas.ucsb.edu"
+date: "June, 2016"
+output: html_document
+---
+
+# Getting started with R
+==============================
+
+1. Connect to Aurora via ssh
+2. Start R in interactive mode from the terminal
+
+
+# R data types
+There are 5 main types: double, integer, complex, logical and character.
+
+
+## Numbers (double and integer shown)
+
+```{r}
+2 * 3
+x <- 3 ^ 2
+x
+y <- 5
+y
+z <- x / y
+z  # Python would have returned something different!!
+```
+
+x, y and z in the above example are called varialbes. In R you assign into the environement values to variables  using ```<-```. You can also use ```=```
+
+?? Did you know you tha in RStudio you can use ``alt```+ ```-``` to write ```<-``` in one keystroke?
+
+## Characters
+```{r}
+# You tell R that you are inputting a character by using quotes (single or double) around the text you would like to enter
+
+"That's easy"
+'This work to'
+
+# What happen if you forget the quotes?
+"a"
+a
+
+
+"x"
+x
+
+# Combining characters
+my_first_name <- "Julien"
+my_last_name <- "Brun"
+
+my_full_name <- my_first_name + my_first_name # Would have worked in Python!
+
+# In R you can use the functino paste()
+# how do I know how paste work?
+
+?paste
+
+# use spacebar to scroll by page and q to quit the help
+
+
+```
+
+
+
+
+# Input output operations
+
+## Inputting data
+
+```{r, eval = FALSE}
+x <- scan("data_file.txt")
+# add a separator
+x <- scan("data/messy_data.txt", what=" ", sep = "\n")
+# or read data from the console
+x <- scan()
+# keep entering values and hit an empty return key to end
+```
+Reading single lines (e.g. user input)
+
+```{r, eval = FALSE}
+variable <- readline()
+# or provide more information
+variable <- readline("Enter number of simulations: ")
+```
+
+
+## Reading files  
+Most plain text files can be read with `read.table` or variants thereof (such as `read.csv`).
+
+```{r, eval = FALSE}
+df <- read.table("data.dat", header = TRUE)
+```
+
+or using `readLines`
+
+```{r, eval = TRUE}
+dt <- readLines("data/messy_data.txt")
+head(dt)
+```
+
+## Files from the web
+
+```{r, eval = TRUE}
+url <- "data/climate.csv"
+my_data <- read.csv(url, header = TRUE)
+head(my_data)
+```
+
+## Local file operations
+
+One can list files from any local source as well.
+
+```{r, eval = FALSE}
+list.files()
+file.info()
+dir()
+file.exists()
+getwd()
+setwd()
+```
+
+
+---
+
+
+
+## Writing files
+
+Saving files is easy in R. Load the `iris` dataset by running `data(iris)`. Can you save this back to a `csv` file to disk with the name `tgac_iris.csv`?
+
+What commands did you use?
+
+
+# Short term storage
+
+```{r, eval = TRUE}
+saveRDS(iris, file = "my_iris.rds")
+iris_data <- readRDS("my_iris.rds")
+unlink("my_iris.rds")
+```
+This is great for short term storage. All factors and other modfications to the dataset will be preserved. However, only R can read these data back and not the best option if you want to keep the file stored in the easiest format.
+
+# Long-term storage
+
+```{r, eval = FALSE}
+write.csv(iris, file = "my_iris.csv", row.names = FALSE)
+```
+
+# Easy to store compressed files to save space:
+
+```{r, eval = FALSE}
+write.csv(diamonds, file = bzfile("diamonds.csv.bz2"),
+  row.names = FALSE)
+```
+
+# Reading is even easier:
+
+```{r, eval = FALSE}
+diamonds5 <- read.csv("diamonds.csv.bz2")
+```
+
+Files stored with `saveRDS()` are automatically compressed.
+
+
+
+# R data structures
+
+
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
