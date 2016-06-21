@@ -78,3 +78,7 @@ And you can start the whole commit process again, once you have reached a milest
 
 We will talk about pushing and pulling to a remote machine/server another time.
 
+
+# References
+
+- GitHub and  

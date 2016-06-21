@@ -18,20 +18,22 @@ https://docs.google.com/document/d/1iiQk9lGyFo8T_JW8wLIaLPfeaZ2sNi7pn7Df-BTClYI/
 
 order  |  Module Name  |  Lesson  |  Preparation Status
 ------ |  -----------  |  -------- |  ------------------ 
-00     |  Introduction |  Introduction  | Need to be created
-01  | Command line  |  [01-command Line](01-command-line/1-command-line.md)  |  Need to be adapted from OSS 
-01  | Command line  |  [02-vim](01-command-line/2-vim.md)  |  Ready to be reused    
-02  | 
-02  | 
-03  | 
+00     |   |  Introduction  | Need to be created
+01  | Command line  |  [command-line](01-command-line/1-command-line.md)  |  Need to be adapted from OSS 
+01  | Command line  |  [Vim](01-command-line/2-vim.md) |  Ready to be reused    
+02  | Working remote | [Servers and networks](02-working-remote/1-servers-and-networks.md)  |  To be shortened
+02  | Working remote | [Alternative ways to connect to Aurora](02-working-remote/2-working-remote-overview.md) |Ready to be reviewed
+03  | Collaborative Science | [Collaborative Tools](00-collaborative-tools/virtual-collaboration.md) | Gathered information from OSS
 04  | 
-05  | Code Versioning  | [1-code-versioning-basics](05-code-versioning/1-code-versioning-basics.md) | **Ready to be reviewed**
-05  |
+05  | Code Versioning  | [Git basics](05-code-versioning/1-code-versioning-basics.md) | **Ready to be reviewed**
+05  | Code Versioning  | [Git from RStudio](05-code-versioning/2-getting-started-with-git-in-RStudio.md) | **Ready to be reviewed**
+05  | Code Versioning  | [Git remotes](05-code-versioning/3-code-versioning-remote.md) | **Ready to be reviewed**
+05  | Code Versioning  | [GitHub](05-code-versioning/4-github.md) | **Ready to be reviewed**
 06  |
 06  |
 06  | 
-07  | 
-08  |  Using multiple cores | [08-multicore-processing](08-multicore-processing/1-multiprocessing-tools.md)
+07  | Introduction to Python | [quick dive into Python](07-intro_Python/1-quick-dive-into-python.md)
+08  |  Using multiple cores | [08-multicore-processing](08-multicore-processing/1-multiprocessing-tools.md) | **Ready to be reviewed**
 09  | 
  
 

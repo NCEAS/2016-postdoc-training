@@ -1,6 +1,6 @@
 ---
 title: "Servers and Networks"
-author: "Adapted from Matt JOnes by Julien Brun, Mark Schildhauer"
+author: "Matt Jones"
 date: "June, 2016"
 output: ioslides_presentation
 ---

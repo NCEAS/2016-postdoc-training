@@ -1,3 +1,12 @@
+---
+layout: lesson
+root: ../..
+title: Quick dive into Python
+author: "Julien Brun"
+date: "June, 2016"
+output: ioslides_presentation
+---
+
 # QUICK DIVE INTO PYTHON
 
 # How do I start Python?
@@ -13,7 +22,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```
 To finish your session type:
 
-```
+```python
 >>> quit()
 ```
 Note that you can also use  an end-of-file character (Control-D on Unix-like, Control-Z on Windows) at the primary prompt causes the interpreter to exit with a zero exit status.
@@ -42,7 +51,7 @@ object?   -> Details about 'object', use 'object??' for extra details.
 
 In [1]: 
 ```
-Note you end your session as previously.
+Note: you can end your session as previously.
 
 ## Through an Integrated Development Environment (IDE)
 
@@ -57,6 +66,26 @@ There are many python oriented IDE out [there](https://wiki.python.org/moin/Inte
 
 
 ---
+# Quick note for R users
+
+There are few fondamentals differences that a R user starting Python should now:
+
+- Indentation in your code matters in Python; it moslty replaces {} in R
+- R Package equivalent is called module. Although the import of the module is pretty similar, in Python modules need to be installed from outside Python
+- In Python, ```.``` is an operator (as in other object oriented Programming languages), not a "space filler" like in R. Do not use ```.``` in names! [more here](https://www.codecademy.com/en/forum_questions/5170307264a7402d9a0012f5)
+- "<-" does not exists in Python
+- The indexing in lists, array, ... starts at 0, e.g. 
+
+```python
+l = ["a","b","c"]
+l[1]
+# b
+```
+- In Python, loops are cool
+- In Python, there is no data strucutre similar to dataframe, you need a specific module called [pandas](http://pandas.pydata.org/pandas-docs/stable/10min.html). However you have dictionaries that associate keys and values.
+
+
+---
 
 # Basics
 
@@ -64,81 +93,81 @@ There are many python oriented IDE out [there](https://wiki.python.org/moin/Inte
 
 The interpreter acts as a simple calculator: you can type an expression at it and it will write the value. Expression syntax is straightforward: the operators ```+```, ```-```, ```*``` and ```/``` work just like in most other languages (for example, Pascal or C); parentheses (```()```) can be used for grouping. For example:
 
-```
->>> 2 + 2
-4
->>> 50 - 5*6
-20
->>> (50 - 5.0*6) / 4
-5.0
->>> 8 / 5.0
-1.6
+```python
+2 + 2
+# 4
+50 - 5*6
+# 20
+(50 - 5.0*6) / 4
+# 5.0
+8 / 5.0
+# 1.6
 ```
 
 The integer numbers (e.g. 2, 4, 20) have type ```int```, the ones with a fractional part (e.g. 5.0, 1.6) have type ```float```. We will see more about numeric types later in the tutorial.
 
 The return type of a division (```/```) operation depends on its operands. If both operands are of type ```int```, floor division is performed and an ```int``` is returned. If either operand is a ```float```, classic division is performed and a ```float``` is returned. The ```//``` operator is also provided for doing floor division no matter what the operands are. The remainder can be calculated with the ```%``` operator:
 
-```
->>> 17 / 3  # int / int -> int  **!!! DIFFERENT FROM R!!!**
-5
->>> 17 / 3.0  # int / float -> float
-5.666666666666667
->>> 17 // 3.0  # explicit floor division discards the fractional part
-5.0
->>> 17 % 3  # the % operator returns the remainder of the division
-2
->>> 5 * 3 + 2  # result * divisor + remainder
-17
+```python
+17 / 3  # int / int -> int  **!!! DIFFERENT FROM R!!!**
+# 5
+17 / 3.0  # int / float -> float
+# 5.666666666666667
+17 // 3.0  # explicit floor division discards the fractional part
+# 5.0
+17 % 3  # the % operator returns the remainder of the division
+# 2
+5 * 3 + 2  # result * divisor + remainder
+# 17
 ```
 
 With Python, it is possible to use the ```**``` operator to calculate powers
 
-```
->>> 5 ** 2  # 5 squared
-25
->>> 2 ** 7  # 2 to the power of 7
-128
+```python
+5 ** 2  # 5 squared
+# 25
+2 ** 7  # 2 to the power of 7
+# 128
 ```
 
 The equal sign (```=```) is used to assign a value to a variable. Afterwards, no result is displayed before the next interactive prompt:
 
-```
->>> width = 20
->>> height = 5 * 9
->>> width * height
+```python
+width = 20
+height = 5 * 9
+width * height
 900
 ```
 
 If a variable is not “defined” (assigned a value), trying to use it will give you an error:
 
-```
->>> n  # try to access an undefined variable
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-NameError: name 'n' is not defined
+```python
+n  # try to access an undefined variable
+# Traceback (most recent call last):
+#  File "<stdin>", line 1, in <module>
+# NameError: name 'n' is not defined
 ```
 
 There is full support for floating point; operators with mixed type operands convert the integer operand to floating point:
 
-```
->>> 3 * 3.75 / 1.5
-7.5
->>> 7.0 / 2
-3.5
+```python
+3 * 3.75 / 1.5
+# 7.5
+7.0 / 2
+#3.5
 ```
 
 **In interactive mode, the last printed expression is assigned to the variable ```_```**. This means that when you are using Python as a desk calculator, it is somewhat easier to continue calculations, for example:
 
-```
->>> tax = 12.5 / 100
->>> price = 100.50
->>> price * tax
-12.5625
->>> price + _
-113.0625
->>> round(_, 2)
-113.06
+```python
+tax = 12.5 / 100
+price = 100.50
+price * tax
+# 12.5625
+price + _
+# 113.0625
+round(_, 2)
+# 113.06
 ```
 
 This variable should be treated as read-only by the user. Don’t explicitly assign a value to it — you would create an independent local variable with the same name masking the built-in variable with its magic behavior.
@@ -151,7 +180,7 @@ In addition to ```int``` and ```float```, Python supports other types of numbers
 
 Besides numbers, Python can also manipulate strings, which can be expressed in several ways. They can be enclosed in single quotes (```'...'```) or double quotes (```"..."```) with the same result. ```\``` can be used to escape quotes:
 
-```
+```python
 >>> 'spam eggs'  # single quotes
 'spam eggs'
 >>> 'doesn\'t'  # use \' to escape the single quote...
@@ -168,7 +197,7 @@ Besides numbers, Python can also manipulate strings, which can be expressed in s
 
 In the interactive interpreter, the output string is enclosed in quotes and special characters are escaped with backslashes. While this might sometimes look different from the input (the enclosing quotes could change), the two strings are equivalent. The string is enclosed in double quotes if the string contains a single quote and no double quotes, otherwise it is enclosed in single quotes. The ```print``` statement produces a more readable output, by omitting the enclosing quotes and by printing escaped and special characters:
 
-```
+```python
 >>> '"Isn\'t," she said.'
 '"Isn\'t," she said.'
 >>> print '"Isn\'t," she said.'
@@ -183,7 +212,7 @@ Second line.
 
 If you don’t want characters prefaced by ```\``` to be interpreted as special characters, you can use **raw strings** by adding an ```r``` before the first quote:
 
-```
+```python
 >>> print 'C:\some\name'  # here \n means newline!
 C:\some
 ame
@@ -194,7 +223,7 @@ C:\some\name
 It as simple to create **unicode sctrings** by adding an ```u``` before the first quote. Unicode has the advantage of providing one ordinal for every character in every script used in modern and ancient texts.
 
 ```python
->>> u'Hello World !'
+u'Hello World !'
 u'Hello World !'
 ```
 
@@ -699,5 +728,6 @@ def myfunction(params):
 * [Dive into Python](http://www.diveintopython.net)
 * [The Hitcher's guide to Python](http://docs.python-guide.org/en/latest/)
 * [Python Glossay](https://docs.python.org/2/glossary.html#term-generator)
+
 
 ## Sources

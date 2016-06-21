@@ -1,6 +1,6 @@
 # GitHub
 	
-You might also have heard of [GitHub](https://github.com). GitHub is a company that hosts git repositories online and provides several collaboration features. GitHub fosters a great user community and has built a nice graphical interface to git, adding great visualization capacities of your data.
+You might also have heard of [GitHub](https://github.com). **GitHub is a company that hosts git repositories online** and provides several collaboration features. GitHub fosters a great user community and has built a nice graphical interface to git, adding great visualization capacities of your data.
 
 * **GitHub.com**: https://github.com
 * **SNAPP on GitHub.com**: https://github.com/Science-for-Nature-and-People
@@ -16,9 +16,10 @@ URL: [https://github.nceas.ucsb.edu](https://github.nceas.ucsb.edu/)
 
 LOGIN: the instance uses NCEAS LDAP authentication (same as redmine, …). If you do not have an NCEAS account you can create one [here](https://identity.nceas.ucsb.edu/identity/cgi-bin/ldapweb.cgi?cfg=account).
 
+
 ## Creating a new repo
 
-* On NCEAS github website ([https://github.nceas.ucsb.edu](https://github.nceas.ucsb.edu/)):
+* On NCEAS GitHub website ([https://github.nceas.ucsb.edu](https://github.nceas.ucsb.edu/)):
 
     * Create a repo with the same name as your local repo/folder
 
@@ -60,9 +61,12 @@ LOGIN: the instance uses NCEAS LDAP authentication (same as redmine, …). If y
 
 * Select your team ![image alt text](images/image_13.png)
 
-* Select the appropriate Permission level ![image alt text](images/image_14.png)We recommend Admin or Write
+* Select the appropriate Permission level. We recommend Write or Admin. Admin allows people to also add collaborators. 
 
-## Forking
+![image alt text](images/image_14.png)
+
+
+## Collaborating through Forking
 
 A **fork** is a **copy of a repository**. Forking a repository allows you to freely experiment with changes without affecting the original project.
 
@@ -74,8 +78,10 @@ By using GitHub's @mention system in your Pull Request message, you can ask for 
 
 
 # References
+
 - GitHub:
  - guides on how to use GitHub: https://guides.github.com/
+ - GitHub from RStudio: http://r-pkgs.had.co.nz/git.html#git-pull
 - Forking:
  - https://help.github.com/articles/fork-a-repo/ 
  - https://guides.github.com/activities/forking/

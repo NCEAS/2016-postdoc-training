@@ -1,43 +1,53 @@
+---
+layout: lesson
+root: ../..
+title: Introduction to Unix and the command line
+author: "Jim Regetz, adapted by Julien Brun"
+date: "June, 2016"
+output: ioslides_presentation
+---
+
 # Virtual collaboration
 
-# Panoply of technology
+## Panoply of technology
 
 ![](images/file_transfer.png
     "http://imgs.xkcd.com/comics/file_transfer.png")
 
 <!-- considerations when choosing among similar solutions -->
 
-# Ease of use
+## What to consider when choosing among similar solutions?
+## Ease of use
 
-> - does it require dedicated software?
+- does it require dedicated software?
 - does it require specific training?
 - can you move easily across platforms, devices?
 
 ### Who are your users?
 
-# Who controls content
+## Who controls content
 
-## is it stored...
+### is it stored...
 
-> - ...locally for individuals?
+- ...locally for individuals?
 - ...on a (trusted) shared server?
 - ...on a commercial platform?
 
-# Performance
+## Performance
 
-> - Are there size limits?
+- Are there size limits?
 - Are there speed bottlenecks?
 - Is reliability high enough?
 
-# Other considerations...
+## Other considerations...
 
-> - Open source or proprietary
+- Open source or proprietary
 - Portability
 - Killer features
 
 # Recap
 
-> * Ease of use
+* Ease of use
 * Who controls content
 * Open source or proprietary
 * Performance
@@ -52,7 +62,7 @@
 
 # What are your needs?
 
-> * What is your content?
+* What is your content?
     * Ideas? Documents? Tasks? Data? Analyses? References?
 * Asynchronous or synchronous?
 * Online or offline?
@@ -64,15 +74,16 @@
 
 ![](images/email.jpg)
 
-> * Content not really shared
+* Content not really shared
 * Management burden imposed on each user
+* mailing list such as Google groups can help to organize email threads
 
 # Messaging, conversations
 
 ![](images/Messaging-icon.png
     "http://icons.iconarchive.com/icons/thiago-silva/palm/256/Messaging-icon.png")
 
-> * IRC
+* IRC, Slack
 * Twitter, Google+, Facebook, ResearchGate
 
 # Video, screen sharing
@@ -80,26 +91,26 @@
 ![](images/video-conferencing.jpg
     "http://findasoft.com/wp-content/uploads/2013/01/video-conferencing.jpg")
 
-> * Google+ Hangouts
+* Google+ Hangouts
 * Skype
-* Go To Meeting
-* WebEx
+* GoToMeeting
+* Zoom
 
 # File sharing
 
 ![](images/sharedancefiles.png
     "http://www.shelly-stone.com/wp-content/uploads/2012/08/sharedancefiles.png")
 
-> * Dropbox
+* Google Drive, box, Dopbox, ...
+* Redmine
 * BtSync
-* Google Drive
 
 # Version control systems
 
 ![](images/version-control-edit-commit.png
     "http://version-control.net/wp-content/uploads/2011/03/version-control-edit-commit.png")
 
-> * Git
+* Git
 * Subversion
 
 # Collaborative editing
@@ -107,7 +118,7 @@
 ![](images/500px-Bb_IM_Whiteboard.png
     "http://wiki.ubc.ca/images/thumb/9/9b/Bb_IM_Whiteboard.png/500px-Bb_IM_Whiteboard.png")
 
-> * Etherpad
+* Etherpad
 * Google Docs
 * MediaWiki
 * ...other wiki software
@@ -116,21 +127,21 @@
 
 #### (typically: issue tracking, repo browser, wiki)
 
-> * Redmine, Trac, Jira
-* Github, Google Code, Sourceforge
+* Redmine, Trac, Jira
+* Github, GitLab, Sourceforge
 
 # Content management systems
 
 ![](images/web.jpg
     "http://www.ostpl.com/Gallery/web.jpg")
 
-> * Drupal
+* Drupal
 * WordPress
 * Plone
 
 # Data/artifact sharing
 
-> * KNB
+* KNB
 * DataONE
 * FigShare
 * Dryad
@@ -138,14 +149,15 @@
 
 # Remote Computation
 
-> * Shell
-* Grid engines
-* Condor
-* Globus
-* Hadoop
-* "The Cloud"
+* [HTCondor](https://research.cs.wisc.edu/htcondor/)
+* [Globus](https://www.globus.org)
+* Hadoop, Spark, Drill
+* "The Cloud": e.g. [AWS](https://aws.amazon.com/free/)
 
 # Bibliographic
 
-> * Zotero
-* Mendeley
+* Zotero - [how to share a bibliography with a group](https://www.zotero.org/support/groups)
+* Mendeley [how to share a bibliography with a group](http://support.mendeley.com/customer/en/portal/articles/227905-how-can-i-share-documents-on-mendeley-)
+
+Note: Mendeley is more restrictive in regards to the number of members in a group and the number of groups you can create. Here is a good side by side comparison: http://www.library.yorku.ca/web/research-learn/citations/zotero-vs-mendeley-comparison/
+
