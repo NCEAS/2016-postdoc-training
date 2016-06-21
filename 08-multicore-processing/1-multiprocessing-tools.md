@@ -5,7 +5,7 @@
 
 # Tools to use multiple cores 
 
-Well, you are now working on a server, congrats!! so What's the big deal?! Well you have a lot of cores waiting to help you to conduct you analysis. Awesome, well wait... are not scripting languages going through my codes sequentially by default?! Don't tell me I need to rewrite all my scripts!!!!
+Well, you are now working on a server, congrats!! What's the big deal?! Well you have a lot of cores waiting to help you to conduct your analysis. Awesome, well wait... are not scripting languages going through my codes sequentially by default?! Don't tell me I need to rewrite all my scripts!!!!
 
 No, you don't have to. There are low hanging fruits available to you to take advantages of multiple cores in your processing. Any for loop is an opportunity to distribute you work accross multiple cores. In R, any use of the apply family function might be an opportunity of leveraging multiprocessing. How? well as for most of the tasks there are packages and modules available to help you to do so.
 
@@ -17,7 +17,7 @@ library(doParallel)
 detectCores()
 ```
 ### mclapply 
-_Do not work on Windows!!_ [here](https://en.wikipedia.org/wiki/Fork–exec) to know why.
+_Does not work on Windows!!_ [here](https://en.wikipedia.org/wiki/Fork–exec) to know why.
 
 ```mclapply``` is the multiple core version of ```lapply```. It means anywhere you are using ```lapply```, you can try to substitute it with ```mclapply```.
 
@@ -48,7 +48,7 @@ system.time(mclapply(mat_list,eigen,mc.cores=4))
 
 ### foreach
 
-The foreach package provides a new looping construct for executing R code repeatedly. With moderate modification to you code, you can transform a serial execution of a for loop into a parallel execution. Here is a simple example: 
+The foreach package provides a new looping construct for executing R code repeatedly. With moderate modification to your code, you can transform a serial execution of a for loop into a parallel execution. Here is a simple example: 
 
 We are going to download the shapefiles produced by the [United States Drought Monitor](http://droughtmonitor.unl.edu) for the year 2016. There is one shapefile produced per week capturing the drought conditions over the contiguous US using a qualitative scale.
 
@@ -56,7 +56,9 @@ We are going to download the shapefiles produced by the [United States Drought M
 
 ```r
 # libraries
-#install.packages(downloader)
+#install.packages('downloader')
+#install.packages('foreach')
+#install.packages('doParallel')
 library(downloader)
 library(foreach)
 library(doParallel)
@@ -90,6 +92,7 @@ system.time(
      unzip(zip_file, exdir = file.path("data","2016","SHP"), overwrite = TRUE)
    }
 )
+# your system.time values may vary from those printed below
 #   user  system elapsed 
 #  0.120   0.052   0.172 
 
@@ -117,14 +120,14 @@ stopCluster(cl)
 <img style="float: left;width: 50px;" src="images/challengeproblemred_scribble.png"/>
 
 
-As a team of 2 take 15min to make this code better adopting the best practices we discussed earlier. Commit your changes
+As a team of 2, take 15min to make this code better adopting the best practices we discussed earlier. Commit your changes
  
 
 ## Python
 
 ### Multiprocessing module
 
-Simlarly in Python there is a specific module that help to implement [multiprocessing]().
+Simlarly in Python there is a specific module that can help to implement [multiprocessing]().
 
 ```python
 # Import the modules
@@ -137,18 +140,18 @@ import multiprocessing
 nb_proc = 4
 pool = multiprocessing.Pool(nb_proc)
 
-# Running a fuction using mulitprocessing
+# Running a fuction using multiprocessing
 test = pool.map(my_function,my_list_of_parameters) #in the example above, filenames
 
 ```
 
-See script in annexe for example. Try the same challenge: Can you improve its syntax?
+See script in annex for example. Try the same challenge: Can you improve its syntax?
 
 ## General Notes: 
-- This implementation is only possible when the iterations in the for loop are independant from each others, meaning there is dependacny of the foloopwing iteration to the result of the preivous one.
-- The RAM of the server is shared accross the different processes running, it can be a limitation to the number of cores you can use if you are working with large data (on one machine).
-- If you have nested for loops, you generally try to parallelize the outter one
-- It is harder to debug parallel execution (for example print statment are not returned). Developp and test your code on a serial version first, then once the code does what you want look into multicores options
+- This implementation is only possible when the iterations in the for loop are independent from each other, meaning there is dependency of the following iteration to the result of the previous one.
+- The RAM of the server is shared across the different processes running, it can be a limitation to the number of cores you can use if you are working with large data (on one machine).
+- If you have nested for loops, you generally try to parallelize the outer one
+- It is harder to debug parallel execution (for example print statements are not returned). Develop and test your code on a serial version first, then once the code does what you want, look into multicores options
 
 ## References
 ### R
