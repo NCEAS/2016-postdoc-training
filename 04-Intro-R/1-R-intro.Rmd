@@ -25,7 +25,7 @@ x
 y <- 5
 y
 z <- x / y
-z  # Python would have returned something different!!
+z  # Python would have returned an integer!!
 ```
 
 x, y and z in the above example are called varialbes. In R you assign into the environement values to variables  using ```<-```. You can also use ```=```
