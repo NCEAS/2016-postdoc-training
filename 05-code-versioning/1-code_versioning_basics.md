@@ -124,8 +124,24 @@ Let us have a closer look at the git workflow. It is important that a good porti
 * ```git log``` displays history of committed snapshots. It lets you list the project history, filter it, and search for specific changes.
 * ```git diff --cached```
 To be used before committing to preview the changes to be committed. 
+* ```git diff HEAD~1 my_script.R``` to inspect the changes between the last commit (HEAD) and the previous one
+* ```git diff HEAD~2 my_script.py ``` to inspect the changes between the last commit (HEAD) and 2 commits before.
+
 
 Git has a lot of terms and commands, see reference at the end of this document for an extensive terminology. Here
+
+## Ignoring a certain type of file
+
+```.gitignore``` is a specific file used to list what (type of) files you do not want git to track. This file need to be placed at the top level of the directory.
+
+File content example from GitHub:
+https://gist.github.com/octocat/9257657 
+
+To create this file from the terminal/shell:
+```
+vim .gitignore
+```
+
 
 ## Undoing things
 
@@ -164,3 +180,4 @@ More info about how to undo things [here](https://git-scm.com/book/en/v2/Git-Bas
 - Git documentation - the basics: https://git-scm.com/book/en/v2/Getting-Started-Git-Basics
 - Git terminology: https://www.atlassian.com/git/glossary/terminology
 - NCEAS wiki page on git: https://help.nceas.ucsb.edu/git?s[]=git
+- In trouble, guide to know what to do: http://justinhileman.info/article/git-pretty/git-pretty.png
