@@ -130,7 +130,7 @@ To be used before committing to preview the changes to be committed.
 
 Git has a lot of terms and commands, see reference at the end of this document for an extensive terminology. Here
 
-## Ignoring a certain type of file
+## Ignoring certain types of file
 
 ```.gitignore``` is a specific file used to list what (type of) files you do not want git to track. This file need to be placed at the top level of the directory.
 
@@ -141,6 +141,8 @@ To create this file from the terminal/shell:
 ```
 vim .gitignore
 ```
+
+To know more: https://git-scm.com/docs/gitignore
 
 
 ## Undoing things
