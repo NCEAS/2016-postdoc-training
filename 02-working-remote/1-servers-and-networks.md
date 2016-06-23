@@ -123,21 +123,6 @@ Few advantages of working remote:
 ![](images/img_HTTP_request.png)
 
 
-## Secure Shell (ssh)
-
-* Used for connecting to and running shell commands on a remote host
-* Tremendously simplifies remote computing
-* Supported out-of-the-box on Linux and Macs
-
-### We will use this later:
-
-```bash
-ssh aurora.nceas.ucsb.edu
-```
 
 ## References
-
-
-
-## Sources
 This material has been adapted from the [Open Science for Synthesis - 2014](https://www.nceas.ucsb.edu/OSS) training material. See [NCEAS github repository](https://github.com/NCEAS/training/tree/master/2014-oss) for more information.

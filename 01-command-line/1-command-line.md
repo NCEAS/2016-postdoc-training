@@ -84,14 +84,6 @@ CLI
 * Much "cheaper" to do work on a remote system (no need to
       transmit all the graphical stuff over the network)
 
-## Let's connect
-
-![ssh command line screenshot](images/isis-ssh.png)
-
-## Lay of the land
-
-![The directory hierarchy](images/f778-1.gif
-    "http://www.informatics.buzdo.com/p778_debian_root_boot_bin_lib_dev.htm")
 
 ### Navigating and managing files/directories
 
@@ -270,9 +262,9 @@ $ find . -size +10G -ls
     * Like Windows Task Manager, OSX Activity Monitor
     * `top`, `ps`, `jobs`
 * Foreground and background
-* Stay persistent with `screen`
+* Stay persistent with `Byobu`: to keep your session live even if you disconnect, type this once logged in the server:  ```byobu-enable```
 * Need to go visual?
-    * X11 forwarding, x2go, VNC
+    * x2go, X11 forwarding, VNC
 
 ## Online resources
 
@@ -281,3 +273,4 @@ $ find . -size +10G -ls
 * http://www.tuxfiles.org/linuxhelp/cli.html
 * http://www.linfo.org/command_line_lesson_1.html
 * [Free book!](http://linuxcommand.org/tlcl.php)
+* More about byobu: https://help.ubuntu.com/community/Byobu
