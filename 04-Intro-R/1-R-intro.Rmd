@@ -1,15 +1,24 @@
 ---
 title: "Short Introduction to R"
-author: "brun@nceas.ucsb.edu"
+author: "Adapted by Julien Brun from OSS 2014"
 date: "June, 2016"
-output: html_document
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    toc_float: true
 ---
 
-# Getting started with R
-==============================
+# Starting with R
 
+R consoole
 1. Connect to Aurora via ssh
 2. Start R in interactive mode from the terminal
+
+Or use RStudio IDE
+
+1. https://aurora.nceas.ucsb.edu/rstudio/
+2. login
 
 
 # R data types
@@ -18,22 +27,22 @@ There are 5 main types: double, integer, complex, logical and character.
 
 ## Numbers (double and integer shown)
 
-```{r}
+```{r, eval = FALSE}
 2 * 3
 x <- 3 ^ 2
 x
 y <- 5
 y
 z <- x / y
-z  # Python would have returned something different!!
+z  # Python would have returned an integer!!
 ```
 
 x, y and z in the above example are called varialbes. In R you assign into the environement values to variables  using ```<-```. You can also use ```=```
 
-?? Did you know you tha in RStudio you can use ``alt```+ ```-``` to write ```<-``` in one keystroke?
+![tips](images/tip.png) Did you know you that in RStudio you can use ``alt```+ ```-``` to write ```<-``` in one keystroke?
 
 ## Characters
-```{r}
+```{r, eval = FALSE}
 # You tell R that you are inputting a character by using quotes (single or double) around the text you would like to enter
 
 "That's easy"
@@ -43,9 +52,11 @@ x, y and z in the above example are called varialbes. In R you assign into the e
 "a"
 a
 
-
+# In this case?
 "x"
 x
+
+# Why?
 
 # Combining characters
 my_first_name <- "Julien"
@@ -60,10 +71,9 @@ my_full_name <- my_first_name + my_first_name # Would have worked in Python!
 
 # use spacebar to scroll by page and q to quit the help
 
+paste(my_first_name, my_last_name, sep=" ")
 
 ```
-
-
 
 
 # Input output operations
@@ -96,14 +106,14 @@ df <- read.table("data.dat", header = TRUE)
 
 or using `readLines`
 
-```{r, eval = TRUE}
+```{r, eval = FALSE}
 dt <- readLines("data/messy_data.txt")
 head(dt)
 ```
 
 ## Files from the web
 
-```{r, eval = TRUE}
+```{r, eval = FALSE}
 url <- "data/climate.csv"
 my_data <- read.csv(url, header = TRUE)
 head(my_data)
@@ -165,24 +175,63 @@ diamonds5 <- read.csv("diamonds.csv.bz2")
 Files stored with `saveRDS()` are automatically compressed.
 
 
-
 # R data structures
 
+|  Dimension   | Homogeneous    | Heterogeneous |
+| ------------ | -------------  | ------------- |
+| 1d           | Atomic vector  | List          |
+| 2d           | Matrix         | Data frame    |
+| nd           | Array          |               |
+
+	
+```str()``` is short for *structure* and it gives a compact, human readable description of any R data structure.
+
+## Vector
+
+Vectors have three common properties:
+
+ * Type, `typeof()`, what it is.
+ * Length, `length()`, how many elements it contains.
+ * Attributes, `attributes()`, additional arbitrary metadata.
 
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+### a. Atomic vector
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+You construct an atomic vector using ```c() ```.
 
-```{r}
-summary(cars)
+All elements of an atomic vector must be the same type, so when you attempt to combine different types they will be **coerced** to the most flexible type. Types from least to most flexible are: logical, integer, double, and character.
+
+
+### b. List
+
+You construct an atomic vector using ```list() ```.
+
+The elements of a list can be of different types. List can be nested (list of lists). 
+
+You can turn a list into an atomic vector with `unlist()`. If the elements of a list have different types, `unlist()` uses the same coercion rules as `c()`.
+
+## Matrix and array
+
+Matrices and arrays are created with `matrix()` and `array()`, or by using the assignment form of `dim()`.
+
+High-dimensional generalisations:
+
+* *length()* generalises to *nrow()* and *ncol()* for matrices, and *dim()* for arrays.
+
+* *names()* generalises to *rownames()* and *colnames()* for matrices, and *dimnames(*), a list of character vectors, for arrays.
+
+* *c()* generalises to *cbind()* and *rbind()* for matrices, and to *abind()* (provided by the abind package) for arrays. 
+
+## Data frame
+
+You construct an atomic vector using ```data.frame() ```. Note that *data.frame()*’s default behaviour which turns strings into factors. Use ```stringAsFactors = FALSE``` to suppress this behaviour
+
+```{r, eval = FALSE}
+d <- data.frame(a = c(1,2,3,4,5), 
+                b = c(6,7,8,9,8))
+
 ```
 
-You can also embed plots, for example:
+A data frame is the **most common way of storing data** in R. A data frame is in fact a list of equal-length vectors, meaning the columns can be of different types, but the row are of the same type in each column.
 
-```{r, echo=FALSE}
-plot(cars)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
