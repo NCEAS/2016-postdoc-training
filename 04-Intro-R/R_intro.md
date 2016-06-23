@@ -58,8 +58,7 @@ A data frame is the **most common way of storing data** in R. A data frame is in
 
 
 # References
-- best practices:
+- Best practices:
   - Hadley Wickham: http://adv-r.had.co.nz/Style.html 
   - software carpentry: http://swcarpentry.github.io/r-novice-inflammation/06-best-practices-R.html
-  - Google R style guide; a little bit outdated: https://google.github.io/styleguide/Rguid…
 
