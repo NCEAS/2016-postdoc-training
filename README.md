@@ -12,7 +12,7 @@ This intensive 4-day workshop on *Computational and Collaboration Skills for Int
  
 ## Agenda 
 
-https://docs.google.com/document/d/1iiQk9lGyFo8T_JW8wLIaLPfeaZ2sNi7pn7Df-BTClYI/edit
+https://docs.google.com/document/d/1orLSZVJk9jy_GgwRfVUcwtLF35aHjdDepGjX95X2gqc/edit#heading=h.wdgx4js6ie85
 
 ## Modules status
 
