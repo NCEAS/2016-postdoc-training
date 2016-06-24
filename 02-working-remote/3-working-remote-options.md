@@ -1,11 +1,3 @@
----
-title: "Working on a remote server"
-author: "Julien Brun, Mark Schildhauer"
-date: "June, 2016"
-output: ioslides_presentation
-	widescreen: true
-	self_contained: false
----
 
 In addition to the connection via ssh we used, there are alternative ways to connect to Aurora and in general a remote server. Here we will discuss two alternative ways that offer a grapical user interface (GUI). 
 
@@ -24,7 +16,7 @@ Then we will need to setup your connection for Aurora:
 https://help.nceas.ucsb.edu/remote_access_using_x2go
 
 
-![X2go Desktop](images/x2go_desktop.png)
+![X2go Desktop](images/x2go-desktop.png)
 
 ![https://freeiconshop.com/icon/task-complete-icon-outline/](images/checked32.png)  **Put your nametag up once you are connected succesfully!**
 
