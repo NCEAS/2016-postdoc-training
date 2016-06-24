@@ -18,7 +18,7 @@ https://docs.google.com/document/d/1orLSZVJk9jy_GgwRfVUcwtLF35aHjdDepGjX95X2gqc/
 
 order  |  Module Name  |  Lesson  |  Preparation Status
 ------ |  -----------  |  -------- |  ------------------ 
-00     | Introduction  |   | Need to be created
+00     | Introduction  |   Presentation | Need to be created
 01  | Command line  |  [command-line](01-command-line/1-command-line.md)  |  Need to be adapted from OSS 
 01  | Command line  |  [Vim](01-command-line/2-vim.md) |  Ready to be reused    
 02  | Working remote | [Servers and networks](02-working-remote/1-servers-and-networks.md)  |  To be shortened
