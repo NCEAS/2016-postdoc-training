@@ -244,7 +244,8 @@ x <- scan("data/messy_data.txt", what=" ", sep = "\n")
 x <- scan()
 # keep entering values and hit an empty return key to end
 ```
-Reading single lines (e.g. user input)
+
+## Reading single lines (e.g. user input)
 
 ```{r, eval = FALSE}
 variable <- readline()
