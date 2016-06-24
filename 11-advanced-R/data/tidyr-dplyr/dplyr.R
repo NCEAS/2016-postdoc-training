@@ -1,4 +1,6 @@
-options(digits = 3)
+# Script from Hadley Wickahm, for the RStudio webinar Piplines for data analysis
+# https://www.rstudio.com/resources/webinars/pipelines-for-data-analysis-in-r/ 
+
 library(dplyr)
 library(babynames)
 

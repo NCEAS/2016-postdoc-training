@@ -38,7 +38,7 @@ There are four fundamental functions of data tidying in tidyr:
 - **`separate()`**: splits a single column into multiple columns
 - **`unite()`**: combines multiple columns into a single column
 
-#### => Open the Rscript: data/tidyr-dplyr/2-tidyr.R
+#### => Open the Rscript: data/tidyr-dplyr/tidyr.R
 
 ### dplyr - transform your data
 
@@ -53,10 +53,56 @@ There are seven fundamental functions of data transformation in dplyr:
 
 Don't forget **`group by`**!! group_by() groups data by categorical levels and can be combine with other functions. We will talk more about this later.
 
- 
+[Data wrangling Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf) 
+
+#### => Open the Rscript: data/tidyr-dplyr/dplyr.R 
+![challenge](images/challengeproblemred_scribble.png)
+
+Use this script to investigate the popularity of your name!
+
+
+## Challenge - House market
+
+Zillow is a website providing information about houses for sale. It also collects a lot of data on real estate market. These data are available [here](http://www.zillow.com/research/data/). 
+
+Our goal is to investigate at the zipcode level the difference between the median listed price (price that people ask for their house) and the median sale price (price that the house end up being sold for) from Jan 2010 to May 2016. 
+
+```{r zillow example, eval = FALSE}
+price_listing_median <- read_csv("Zip_MedianListingPrice_AllHomes.csv")
+price_listing_median
+
+Source: local data frame [10,390 x 83]
+
+   RegionName          City State             Metro    CountyName SizeRank 2010-01 2010-02 2010-03 2010-04
+        (chr)         (chr) (chr)             (chr)         (chr)    (int)   (dbl)   (dbl)   (dbl)   (dbl)
+1       10025      New York    NY          New York      New York        1      NA      NA      NA      NA
+2       60657       Chicago    IL           Chicago          Cook        2  349000  349000  339000  340000
+3       60614       Chicago    IL           Chicago          Cook        3      NA      NA      NA      NA
+4       79936       El Paso    TX           El Paso       El Paso        4  132000  129900  129900  129900
+5       77084       Houston    TX           Houston        Harris        5  117500  117900  119900  120000
+6       60640       Chicago    IL           Chicago          Cook        6      NA      NA      NA      NA
+7       94109 San Francisco    CA     San Francisco San Francisco        7      NA      NA      NA      NA
+8       75070      McKinney    TX Dallas-Fort Worth        Collin        8  189900  190000  189900  192950
+9       11375      New York    NY          New York        Queens        9  329000  314950  287500  279888
+10      77449       Cypress    TX           Houston        Harris       10  110890  111779  114900  115000
+```
+![challenge](images/challengeproblemred_scribble.png)
+
+### By team of 2:
+
+- Investigate the data and come up with a strategy on how to clean these messy csv. Inspire yourself from the tidyr script we just looked at.
+- Create the pseudocode of the steps you need to do to be able to compute the difference listed price - sale price
+- Implement your strategy on both csv. Might be slightly different steps.
+- join and compute the difference listed price - sale price
+- plot the time-series for the average median listed price for the county of Santa Barbara
+- how does it compare to the national average?
+- add the time-series for the average sale price for the county of Santa Barbara 
+
+**!! Don't forget to use git to track your progress !!**
+
 ## References
 
-- Data wranfgling R cheatsheet: https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf
+- Data wrangling R cheatsheet: https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf
 - R for Data Science, H. Wickham: http://r4ds.had.co.nz/introduction.html
 - R Programming for Data Science, Roger D. Peng: This book is for sale at http://leanpub.com/rprogramming
 - Data Processing with dplyr & tidyr: https://rpubs.com/bradleyboehmke/data_wrangling
