@@ -234,46 +234,29 @@ To construct a path to a file, it is recommended to use `file.path` and not `pas
 
 # Input / output operations
 
-## Inputting data
-
-```{r, eval = FALSE}
-x <- scan("data_file.txt")
-# add a separator
-x <- scan("data/messy_data.txt", what=" ", sep = "\n")
-# or read data from the console
-x <- scan()
-# keep entering values and hit an empty return key to end
-```
-
-## Reading single lines (e.g. user input)
-
-```{r, eval = FALSE}
-variable <- readline()
-# or provide more information
-variable <- readline("Enter number of simulations: ")
-```
-
-
 ## Reading files  
 Most plain text files can be read with `read.table` or variants thereof (such as `read.csv`).
 
 ```{r, eval = FALSE}
-df <- read.table("data.dat", header = TRUE)
+df <- read.table("data/gapminderDataFiveYear.txt", header = TRUE, sep = "\t")
+head(df)
+tail(df)
 ```
 
 or using `readLines`
 
 ```{r, eval = FALSE}
-dt <- readLines("data/messy_data.txt")
+dt <- readLines("data/gapminderDataFiveYear.txt")
 head(dt)
 ```
 
 ## Files from the web
 
 ```{r, eval = FALSE}
-url <- "data/climate.csv"
+url <- "https://www.nceas.ucsb.edu/~brun/stem.csv"
 my_data <- read.csv(url, header = TRUE)
-head(my_data)
+summary(my_data)
+str(my_data)
 ```
 
 ## Local file operations
@@ -281,14 +264,17 @@ head(my_data)
 One can list files from any local source as well.
 
 ```{r, eval = FALSE}
+# list directories
+list.dirs()
+# List files and directories
 list.files()
-file.info()
-dir()
-file.exists()
-getwd()
-setwd()
-```
+dir("data")
 
+# Check if a file exists
+file.exists("test.csv")
+# Get info about a file
+file.info("data/baby-names2.csv")
+```
 
 
 ## Writing files
