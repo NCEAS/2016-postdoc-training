@@ -207,7 +207,6 @@ You construct an atomic vector using ```data.frame() ```. Note that *data.frame(
 ```{r, eval = FALSE}
 d <- data.frame(a = c(1,2,3,4,5), 
                 b = c(6,7,8,9,8))
-
 ```
 
 A data frame is the **most common way of storing data** in R. A data frame is in fact a list of equal-length vectors, meaning the columns can be of different types, but the row are of the same type in each column.
@@ -218,11 +217,22 @@ When you are working with input/output files and more generally with script, it 
 
 ![warning](images/warning.png) Note we recommend to use set the directory clearly at the beginning of your script and to not change your working directory within your script as it makes it harder to reproduce.
 
-## Getting the current directory
+## Getting and setting the current directory
 
 ```{r setting working dir, eval = FALSE}
+# What is the current directory
+getwd()
 
-# Input output operations
+# Setting the current directory
+setwd("~/snapp-workshop/introR")
+```
+
+## Note on how to build a path in R:
+
+To construct a path to a file, it is recommended to use `file.path` and not `paste` as it will take care of the dfifferent path convention bewteen OS and it id faster.
+
+
+# Input / output operations
 
 ## Inputting data
 
