@@ -243,6 +243,16 @@ head(df)
 tail(df)
 ```
 
+
+Note: by default these function will transform your column typa as factors (variables in R which take on a limited number of different values). This often something you do not want. You can specify this by adding the option `stringsAsFactors = FALSE`:
+
+```{r, eval = FALSE}
+df2 <- read.table("data/gapminderDataFiveYear.txt", header = TRUE, sep = "\t", stringsAsFactors = FALSE)
+
+str(df)
+str(df2)
+```
+
 or using `readLines`
 
 ```{r, eval = FALSE}
