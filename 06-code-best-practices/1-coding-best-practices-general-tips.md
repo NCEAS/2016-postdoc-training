@@ -1,3 +1,13 @@
+---
+layout: lesson
+root: ../..
+title: Coding best practices and tips
+author: "Julien Brun"
+date: "June, 2016"
+output: ioslides_presentation
+
+---
+
 Coding best practices and tips
 ===============================
 
@@ -29,7 +39,10 @@ From the top to the bottom of your script:
 - Choose **intuitives names for your variable and functions**, not generic. If you store a list of files, dod not use `x` for the variable name, use instead `files`. Even better use `input_files` if you are listing the files you are importing.
 - Be consistant in terms of style you use to name your variables, functions, ...
 - **Keep it simple (KISS)**. Do not create too complicated statement. Implement your taks in several lines instead of embedding a lot of executions in one line. It will save you time while debugging and make your code more readable to others
-- **Go modular**! break down taks into small code fragments such as functions. It will make your code reusable for you and others (if well documented). Keep your function simple, they should only implement one or few (realted) tasks
+
+## Few important principles
+
+>- **Go modular**! break down taks into small code fragments such as functions. It will make your code reusable for you and others (if well documented). Keep your function simple, they should only implement one or few (realted) tasks
 - **Don't Repeat Yourself (DRY)**. If you start copy pasting part of your code changing few parameters => write a function and call it several times with different parameters. Add flow control such as loops and conditions. It will be easier to debug, change and maintain
 - **Test your code**. Test your code against values you would expect or computed with another software. Try hedge cases, such as NA, negative values, .... and try to handle errors in your code
 - **Iterates with small steps**, implement few changes at the time to your code. Test, fix and move forward!
@@ -43,27 +56,27 @@ One of the fundamental way of making your code modular and reusable is to create
 
 Is is important to note that The statements in a function definition are not executed as the interpreter first passes over the lines. The function needs to be called for these statement to be exectuted. In other words, if you have a bug in your function statements, but your main code never call this function, the script will run just fine. Only when you call the function you will discover the problem. Keep that in my mind while debugging.
 
-#### R
+## R function defition
 ```r
-my_function_name <- function(argument1, argument2, optional_argument = default_value) {
+my_function_name <- function(argument1, argument2, opt_arg=default_value) {
     statements
     return(object) # not always necessary
 }
 ```
 Note it is specific to R that fuctions are defined using the regular assignment operator `<-`.
 
-#### Python
+## Python function definition
 ```python
 
-def my_function_name(argument1, argument2, optional_argument = default_value):
+def my_function_name(argument1, argument2, optional_arg=default_value):
 	statements
 	return object
 ```
 Python uses the `def` keyword to signal the definiton of a function
 
-### Calling a function
+## Calling a function
 
-#### R
+### R
 ```r
 my_results <- my_function_name(1,2)
 
@@ -71,7 +84,7 @@ my_results <- my_function_name(1,2)
 my_results <- my_function_name(argument2=2, argument1=1)
 ```
 
-#### Python
+### Python
 ```python
 my_results = my_function_name(1,2)
 
@@ -82,14 +95,16 @@ my_results = my_function_name(argument2=2, argument1=1)
 ## ![challenge](images/challengeproblemred_scribble.png) Challenge
 
 
-1. Write a function that compute the percentage of a number: a<sup>2</sup>-b<sup>2</sup>
-2. Modify your function to compute the square root: sqrt(a<sup>2</sup>-b<sup>2</sup>). 
-3. Find potential values that could make the function to crash and add necessary error handling
-3. Comment your function
+1. Write a function that compute the percentage of a number: `n*p/100`
+2. Make the ratio factor a argiument so we can also use it to compute 1/1000
+3. On the same script write a second function to compute a<sup>2</sup>-b<sup>2</sup>
+4. Modify your function to compute the square root: sqrt(a<sup>2</sup>-b<sup>2</sup>). 
+5. Find potential values that could make the function to crash and add necessary error handling
+6. Comment your functions
 
 
 
-### Scope: Global vs. Local Environment
+## Scope: Global vs. Local Environment
 
 All variables in a program may not be accessible at all locations in that program. This depends on where you have declared a variable.
 
@@ -117,7 +132,7 @@ foo <- function() {
 foo()
 bar
 ```
-
+## ![challenge](images/challengeproblemred_scribble.png) Challenge
 ```r
 foo <- function() {
     bar <<- 1  #hein?!
@@ -125,7 +140,7 @@ foo <- function() {
 foo()
 bar
 ```
-One last one:
+## One last one:
 
 ```r
 bar <- "global"
@@ -143,14 +158,23 @@ foo <- function(){
 ```
 Although `<<-` is a specificty of R, the general concept of global and local scope is valid for Python and others.
 
-This also means that there is one more reason to use functions!! All the temporary variables you define in a function are automatically deleted when you exist the function, freeing up the computer memory.
+## Local Scope
+
+This also means that there is one more reason to use functions!! All the temporary variables you define in a function are automatically deleted when you exit the function, freeing up the computer memory.
 
 
 ## Note about loading libraries in R
 
-Firs is a package a library? Not until it is installed on your system using (install.packages("this_awsome_package_I_need")! see [here](http://www.r-bloggers.com/packages-v-libraries-in-r/) for more details.
+>- First: is a package a library? 
+- Not until it is installed on your system using (install.packages("this_awsome_package_I_need")! see [here](http://www.r-bloggers.com/packages-v-libraries-in-r/) for more details.
 
-In R you load a library using `library(mypackage)`. Each library as its own `namespace`. for example if you use dplyr::union dplyr is the namespace and union is the function. Namespace are great to be sure that functions from different packages sharing the same name will not overwritte each others.
+## Namespace
+
+In R you use the command `library(mypackage)` to load a library. Each library has its own `namespace`. 
+
+For example, if you use `dplyr::union` *dplyr* is the **namespace** and *union* is the **function**. Namespace attribution is a great way to be sure that functions from different packages sharing the same name will not overwritte each others.
+
+## Namespace
 
 However when you load a library, you might have noticed/ignored similar messages:
 
@@ -186,6 +210,7 @@ The following objects are masked from ‘package:base’:
 
 ### R styling
 - [A good overview by H. Wickham](http://adv-r.had.co.nz/Style.html) of the best practices regarding best syntax to us in R from Hadley Wickham.
+- Standardized comments: https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html
 
 ### Python styling
 - [the Hitchhiker's guide](http://docs.python-guide.org/en/latest/writing/style/)

@@ -27,7 +27,7 @@ To finish your session type:
 ```
 Note that you can also use  an end-of-file character (Control-D on Unix-like, Control-Z on Windows) at the primary prompt causes the interpreter to exit with a zero exit status.
 
-##Getting python
+##Getting Python
 We recommend to install ***IPython*** that offers a more interactive environment with history caching, access to the shell commands and more advanced autocompletion and help among others. It also provides the kernel for using online notebook (another topic). 
 
 To install your IPython (and any other module) we recommand to use **pip**. pip is a package management system used to install and manage software packages. On Unix-like systems use sudo to install packages at the system level:
