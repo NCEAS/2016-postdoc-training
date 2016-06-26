@@ -1,4 +1,4 @@
-# Secure Shell (ssh)
+# Connecting via Secure Shell (ssh)
 
 * Used for connecting to and running shell commands on a remote host
 * Tremendously simplifies remote computing
