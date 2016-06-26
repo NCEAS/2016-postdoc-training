@@ -49,11 +49,11 @@
     - Viewing on screen
     - Many calculations are faster/simpler
 
+=> All projections involves distortion!! see [here](https://en.wikipedia.org/wiki/Tissot%27s_indicatrix#/media/File:Tissot_world_from_space.png) for a nice example.
+
 # Map projections
 
 ![](images/threepro.gif)
-
-### Projection involves distortion
 
 # Map projections
 
@@ -83,12 +83,6 @@
     - Software for reprojection
     - Vector: trivial
     - Raster: can involve "warping"
-
-# Raster warping
-
-### Raster resampling
-
-![](images/rasterwarp.gif)
 
 # Geodetic Datums
 
@@ -121,6 +115,24 @@ WGS84 vs. NAD27
 ![](images/wgs84-vs-nad27.png)
 
 
+# Coordinate Reference Systems (CRS)
+
+Not only there is myriad of projections, there are also different formats to define them, and different softwares use different notations:
+
+This site is a very good reference about the different projection formats:
+http://epsg.io/ 
+
+Note that a coordinate reference system can be identified by unique Spatial Reference System Identifier (SRID), sometimes also referenced as EPSG (European Petroleum Survey Group, from the consortium name that first started to compile this database):
+- WGS84: SRID 4326
+- NAD83: SRID 4269 
+
+#### => *Search for WGS84, the standard projectin used in GPS*.
+
+# Spatial Resolution
+- There are 
+
+
+
 # Data storage formats
 
 * Considerable variation in terms of
@@ -144,3 +156,10 @@ WGS84 vs. NAD27
 * **Arc/Info binary grid**: proprietary binary format, multi-file
 * **NetCDF**: flexible container for array data
 * _**many others**_: img, bil, grib, [lots more](http://www.gdal.org/formats_list.html)
+
+## References
+
+- list of map projection: https://en.wikipedia.org/wiki/List_of_map_projections
+- Intro from ESRI on coordinate systems: http://resources.esri.com/help/9.3/arcgisengine/dotnet/89b720a5-7339-44b0-8b58-0f5bf2843393.htm 
+- Overview of CRS in R: https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/OverviewCoordinateReferenceSystems.pdf
+- More about the PROJ.4 format: https://trac.osgeo.org/proj/wiki/GenParms
