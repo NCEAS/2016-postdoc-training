@@ -12,6 +12,11 @@ output:
 *Attribution*: this tutorial use as sources the material prepared Karthik Ram for NCEAS [summer school 2013](https://github.com/NCEAS/training/tree/master/2014-oss/day-05/data-manipulation), [Advanced R](http://adv-r.had.co.nz/) by H. Wickham, [STAT 545](http://stat545.com/index.html) @ University of British Columbia,  and [R tutorial](http://www.r-tutor.com/r-introduction) by Chi Yau
 
 
+# R
+
+R is a free software to conduct data analysis (statisitics) and visualization. R runs programs stored in script files.
+
+
 # Starting R
 
 ## R console
