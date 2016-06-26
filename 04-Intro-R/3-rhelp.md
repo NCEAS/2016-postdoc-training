@@ -11,7 +11,7 @@ Finding help on R
 * `library(sos); findFn(...)`
 
 ## Task views
-* Task views (or [this view](http://www.maths.lancs.ac.uk/~rowlings/R/TaskViews/)
+* Task views (or [this view](http://www.maths.lancs.ac.uk/~rowlings/R/TaskViews/) )
     * [Environmetrics](http://cran.r-project.org/web/views/Environmetrics.html)
     * [Phylogeny/comparative methods](http://cran.r-project.org/web/views/Phylogenetics.html)
     * [High-performance](http://cran.r-project.org/web/views/HighPerformanceComputing.html)
@@ -30,9 +30,9 @@ Finding help on R
 * r-bloggers
 * twitter: #rstats
 
-## repositories
-* CRAN
+## Repositories
+* Comprehensive R Archive Network (CRAN)
 * R-forge
 * Bioconductor
-* github
+* GitHub
 * googlecode

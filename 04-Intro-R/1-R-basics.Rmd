@@ -286,6 +286,9 @@ mtcars$cyl > 6
 # subsetting the cars with such engine
 mtcars[mtcars$cyl > 6,]
 
+# You can also use the function subset()
+subset(mtcars, subset = cyl > 6)
+
 ```
 
 # Working directory
