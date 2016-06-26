@@ -2,6 +2,12 @@
 
 ## Where are the bottle necks?
 
+It is important to focus on parts of your code that are taking the most time. This process is called profiling. You can get more or less complex on how you do it and R has a lot of nice tools to help you. We do not have time to talk about this topic in this training, but here are few references to help you to get started:
+
+- General tips about optimization and profiling: http://adv-r.had.co.nz/Profiling.html
+- Profling more details: http://dirk.eddelbuettel.com/papers/useR2010hpcTutorialHandout.pdf 
+- Rprof: http://www.r-bloggers.com/profiling-r-code/   
+- ProfViz: https://rstudio.github.io/profvis/ 
 
 # Tools to use multiple cores 
 

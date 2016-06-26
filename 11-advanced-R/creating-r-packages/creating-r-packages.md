@@ -154,3 +154,5 @@ If your package might be broadly useful, also consider releasing it to CRAN, usi
 
 
 
+## References
+https://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/

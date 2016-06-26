@@ -1,0 +1,475 @@
+---
+title: "Introduction to R"
+author: "Julien Brun"
+date: "June, 2016"
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    toc_float: true
+---
+
+*Attribution*: this tutorial use as sources the material prepared Karthik Ram for NCEAS [summer school 2013](https://github.com/NCEAS/training/tree/master/2014-oss/day-05/data-manipulation), [Advanced R](http://adv-r.had.co.nz/) by H. Wickham, [STAT 545](http://stat545.com/index.html) @ University of British Columbia,  and [R tutorial](http://www.r-tutor.com/r-introduction) by Chi Yau
+
+
+# R
+
+R is a free software to conduct data analysis (statisitics) and visualization. R runs programs stored in script files.
+
+
+# Starting R
+
+## R console
+1. Connect to Aurora via ssh
+2. Start R in interactive mode from the terminal
+
+## RStudio IDE
+
+RStudio is an Integrated Development Environment (IDE). It enables you to work and developp your script comfortably, but it is not required. R is running under the hood. Also note that we are using _RStudio server_ when connecting to Aurora via our web browser, but the the equivalent [desktop](https://www.rstudio.com/products/rstudio/) aplication also exists.
+
+1. https://aurora.nceas.ucsb.edu/rstudio/
+2. login
+
+
+*Important Note*: NCEAS is running the community version of RStudio server. This version supports only one login at the time. If you are logged in and you login from another machine, webrowser, it will terminate your current session and stop any exectution of a script currently running. Therefore for  processing expected to take a long time to executre, we recommend to use the command line with `Rscript` to do these runs.
+
+
+# R data types and basic manipulations
+
+There are 5 main types: double, integer, complex, logical and character.
+
+## Which one of these R commands you do not know?
+
+```{r vocabulary math, eval = FALSE}
+
+# Comparison 
+all.equal, identical
+!=, ==, >, >=, <, <=
+is.na, complete.cases
+is.finite
+
+# Basic math
+*, +, -, /, ^, %%, %/%
+abs, sign
+acos, asin, atan, atan2
+sin, cos, tan
+ceiling, floor, round, trunc, signif
+exp, log, log10, log2, sqrt
+
+max, min, prod, sum
+cummax, cummin, cumprod, cumsum, diff
+range
+mean, median, cor, sd, var
+
+# Logical & sets 
+&, |, !, xor
+all, any
+intersect, union
+which
+```
+
+
+## Numeric (double and integer shown here)
+
+```{r, eval = FALSE}
+2 * 3
+x <- 3 ^ 2
+x
+
+y <- 5
+y
+z <- x / y
+z                # Python would have returned an integer!!
+x %/% y          # like this one
+x %% y           # modulo
+```
+
+x, y and z in the above example are called variables. In R you *assign* to the local environment values to variables using `<-`. Note `=` also exists, but behave slightly differently. We recommend to use `<-`. See [here](http://stackoverflow.com/questions/1741820/assignment-operators-in-r-and) if you want to know more about the differences.
+
+![tips](images/tip.png) Did you know you that in RStudio you can use `alt`+ `-` to write `<-`?
+
+## Characters
+```{r, eval = FALSE}
+# You tell R that you are inputting a character by using quotes (single or double) around the text you would like to enter
+
+"That's easy"
+'This work to'
+
+# What happen if you forget the quotes?
+a
+
+# In this case?
+x
+
+# Why?
+
+# Combining characters
+my_first_name <- "Julien"
+my_last_name <- "Brun"
+
+my_full_name <- my_first_name + my_first_name # Would have worked in Python!
+
+# In R you can use the functino paste() to concatenate strings
+# how do I know how paste work?
+
+?paste
+
+# use _spacebar_ to scroll by page and _q_ to quit the help
+
+paste(my_first_name, my_last_name, sep=" ")
+
+```
+
+
+## logical 
+
+Adapted from from [_R Tutorial_](http://www.r-tutor.com/r-introduction/basic-data-types/logical)
+
+A logical value is often created via comparison between variables.
+```{r logical, eval=FALSE}
+x <- 1; y <- 2   # sample values 
+x > y      # is x larger than y? 
+
+z <- x > y
+class(z)       # print the class name of z
+
+
+u <- TRUE; v <- FALSE 
+u & v          # u AND v 
+u | v          # u OR v 
+!u             # negation of u 
+
+# with vectors
+vu <- c(TRUE, FALSE, TRUE)
+vv <- c(TRUE, FALSE, FALSE)
+
+vu & vv
+vu && vv #(takes only the first element in comparison)
+```
+
+
+# R data structures
+
+|  Dimension   | Homogeneous    | Heterogeneous |
+| ------------ | -------------  | ------------- |
+| 1d           | Atomic vector  | List          |
+| 2d           | Matrix         | Data frame    |
+| nd           | Array          |               |
+
+	
+`str()` is short for *structure* and it gives a compact, human readable description of any R data structure.
+
+## Vector
+
+In R almost everything is a vector. Vectors have three common properties:
+
+ * Type, `typeof()`, what it is.
+ * Length, `length()`, how many elements it contains.
+ * Attributes, `attributes()`, additional arbitrary metadata.
+
+### a. Atomic vector
+
+You construct an atomic vector using `c() `.
+```{r atomic vector, eval= FALSE}
+# numeric vector
+a <- c(1,2,3)
+# character vector
+b <- c("a", "b", "c")
+```
+
+All *elements of an atomic vector must be the same type*, so when you attempt to combine different types they will be **coerced** to the most flexible type. Types from least to most flexible are: logical, integer, double, and character
+
+```{r coersion, eval= FALSE}
+#combine the two, what do you get?
+ab <- c(a,b)
+typeof(ab)
+```
+
+### b. List
+
+You construct an atomic vector using ```list() ```.
+
+The elements of a list can be of different types. List can be nested (list of lists). 
+
+You can turn a list into an atomic vector with `unlist()`. If the elements of a list have different types, `unlist()` uses the same coercion rules as `c()`.
+
+## Matrix and array
+
+Matrices and arrays are created with `matrix()` and `array()`, or by using the assignment form of `dim()`.
+
+High-dimensional generalisations:
+
+- `length()` generalises to `nrow()` and `ncol()` for matrices, and `dim()` for arrays.
+
+- `names()` generalises to `rownames()` and `colnames()` for matrices, and `dimnames()`, a list of character vectors, for arrays.
+
+- `c()` generalises to `cbind()` and `rbind()` for matrices, and to `abind()` (provided by the abind package) for arrays. 
+
+
+## Data frame - most common 
+
+You construct an atomic vector using `data.frame()`. 
+
+```{r, dataframe, eval = FALSE}
+d <- data.frame(a = c(1,2,3,4,5), 
+                b = c(6,7,8,9,8),
+                c = c("q", "w", "e", "r", "y"))
+d
+str(d)
+class(d)
+
+# Note that `data.frame()`’s default behaviour is to turn strings into factors. 
+# Use `stringAsFactors = FALSE` to suppress this behaviour
+
+d <- data.frame(a = c(1,2,3,4,5), 
+                b = c(6,7,8,9,8),
+                c = c("q", "w", "e", "r", "y"),
+                stringsAsFactors = FALSE)
+str(d)
+```
+
+**A data frame is a list of equal-length vectors, meaning each column can store only one data type.**
+
+
+# Subsetting
+
+R has several operators to help you to subset data structures: `[]`,`[[]]`,`$`
+
+What's the difference? Let us try on a dataframe
+
+```{r, subsetting operators, eval = FALSE}
+df <- data.frame(a = 1:2, b = c("red", "blue"))
+
+# Subset by position
+str(df[1])
+#> 'data.frame':	2 obs. of  1 variable:
+#>  $ a: int  1 2
+str(df[[1]])
+#>  int [1:2] 1 2
+
+# Subset by name
+str(df[["a"]])
+#>  int [1:2] 1 2
+str(df$a)
+#>  int [1:2] 1 2
+str(df[, "a"])
+#>  int [1:2] 1 2
+```
+
+**Important note: `$` is convenient and often used, but it does not work with variables!!**
+
+```{r , eval = FALSE }
+
+# Let us try
+var <- "cyl"
+mtcars$var
+
+# => Doesn't work - mtcars$var translated to mtcars[["var"]]
+
+# Instead use [[
+mtcars[[var]]
+
+```
+
+
+Any logical condition can be used to subset a data frame
+
+```{r , eval = FALSE }
+
+head(mtcars)
+dim(mtcars)
+
+## cars with more than a 6 cylinders engine
+# condition
+mtcars$cyl > 6
+
+# subsetting the cars with such engine
+mtcars[mtcars$cyl > 6,]
+
+# You can also use the function subset()
+subset(mtcars, subset = cyl > 6)
+
+```
+
+# Working directory
+
+When you are working with input/output files and more generally with script, it is very important that you set your working directory `setwd()`. The best parallel is to see your working directory as the top level directory containing files and subfolder. It will allow you to set paths realtively to your working directory and keep your code running even if you move your top-level directory to another location on your drive or to another machine.
+
+![warning](images/warning.png) Note we recommend to use set the directory clearly at the beginning of your script and to not change your working directory within your script as it makes it harder to reproduce.
+
+## Getting and setting the current directory
+
+```{r setting working dir, eval = FALSE}
+# What is the current directory
+getwd()
+
+# Setting the current directory
+setwd("~/snapp-workshop/introR")
+```
+
+## Note on how to build a path in R:
+
+To construct a path to a file, it is recommended to use `file.path` and not `paste` as it will take care of the dfifferent path convention bewteen OS and it id faster.
+
+
+# Input / output operations (I/O)
+
+## Reading files  
+Most plain text files can be read with `read.table` or variants thereof (such as `read.csv`).
+
+```{r, eval = FALSE}
+df <- read.table("data/gapminderDataFiveYear.txt", header = TRUE, sep = "\t")
+head(df)
+tail(df)
+```
+
+
+Note: by default these function will transform your column typa as factors (variables in R which take on a limited number of different values). This often something you do not want. You can specify this by adding the option `stringsAsFactors = FALSE`:
+
+```{r, eval = FALSE}
+df2 <- read.table("data/gapminderDataFiveYear.txt", header = TRUE, sep = "\t", stringsAsFactors = FALSE)
+
+str(df)
+str(df2)
+```
+
+or using `readLines`
+
+```{r, eval = FALSE}
+dt <- readLines("data/gapminderDataFiveYear.txt")
+head(dt)
+```
+
+## Files from the web
+
+```{r, eval = FALSE}
+url <- "https://www.nceas.ucsb.edu/~brun/stem.csv"
+my_data <- read.csv(url, header = TRUE)
+summary(my_data)
+str(my_data)
+```
+
+## Local file operations
+
+One can list files from any local source as well:
+
+```{r files, eval = FALSE}
+# list directories
+list.dirs()
+# List files and directories
+list.files()
+dir("data")
+
+# Check if a file exists
+file.exists("test.csv")
+# Get info about a file
+file.info("data/baby-names2.csv")
+```
+
+
+# Writing files
+
+Saving files is easy in R. Load the `iris` dataset by running `data(iris)`. Can you save this back to a `csv` file to disk with the name `tgac_iris.csv`?
+
+What commands did you use?
+
+
+## Short term storage
+
+```{r, eval = FALSE}
+saveRDS(iris, file = "data/my_iris.rds")
+iris_data <- readRDS("data/my_iris.rds")
+unlink("data/my_iris.rds")
+```
+This is great for short term storage. All factors and other modfications to the dataset will be preserved. However, only R can read these data back and not the best option if you want to keep the file stored in the easiest format.
+
+## Long-term storage
+
+```{r, eval = FALSE}
+write.csv(iris, file = "data/my_iris.csv", row.names = FALSE)
+```
+
+## Easy to store compressed files to save space:
+
+```{r, eval = FALSE}
+write.csv(iris, file = bzfile("data/my_iris.csv.csv.bz2"),
+  row.names = FALSE)
+```
+
+## Reading is even easier:
+
+```{r, eval = FALSE}
+us_babynames <- read.csv("baby-names2.csv.bz2")
+head(babynames)
+```
+
+Note: Files stored with `saveRDS()` are automatically compressed.
+
+
+
+# Missing data
+
+Missing data are represented by `NA` in R. 
+
+```{r missing values, eval = FALSE}
+
+v <- c(1, 2, NA, 4, NA)
+
+# Want to know if you have NAs in your data?
+anyNA(v)
+
+# is.na helps you to find where are NAs in your data
+is.na(v)
+
+# Relying on the coersion (logical -> numberic), we can know the number of missing values using sum
+sum(is.na(v))
+
+```
+
+
+NAs "propagate", meaning if you try to compute something on an object including NAs, it will return NA
+
+```{r missing values propagation, eval = FALSE}
+# Functions
+sum(v)
+
+# Any idea how to calculate a sum ignoring NAs?
+?sum
+
+# Same for simple addition
+u <- c(NA, 0, 9, 8, 2)
+v + u
+```
+
+Note that `NULL` also exists in R. `NULL` has its own type. NULL can be interpreted as empty, whereas `NA` can be interpreted as missing. For example, selecting a non-existing column in a dataframe will return `NULL`.
+
+```{r null, eval = FALSE}
+
+# Functions
+df <- data.frame(a = c(1, 2, 3),
+                 b = c(4, 5, 6),
+                 c = c(7, 8, 9))
+df
+df$d
+
+# NULL cab be used to delete column in a dataframe
+df$b <- NULL
+
+# or object from a list
+l <- list(1,2,4)
+l
+
+l[2] <- NULL
+l
+
+```
+
+# References
+
+- Advanced R: http://adv-r.had.co.nz
+- STAT 545, Jenny Bryan: http://stat545.com/index.html
+- RStudio shortcuts: https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts
+- Cleaning data with R: https://cran.r-project.org/doc/contrib/de\_Jonge+van\_der\_Loo-Introduction\_to\_\data_\cleaning\_\with\_R.pdf
+- R for reproducible science: http://swcarpentry.github.io/r-novice-gapminder/04-data-structures-part1.html
+- Quick R: http://www.statmethods.net
+- 
