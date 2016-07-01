@@ -69,10 +69,14 @@ img {
 <ul>
 <li>General tips about optimization and profiling: <a href="http://adv-r.had.co.nz/Profiling.html" class="uri">http://adv-r.had.co.nz/Profiling.html</a></li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <li>Profiling details: <a href="http://dirk.eddelbuettel.com/papers/useR2010hpcTutorialHandout.pdf" class="uri">http://dirk.eddelbuettel.com/papers/useR2010hpcTutorialHandout.pdf</a></li>
 =======
 <li>Profling more details: <a href="http://dirk.eddelbuettel.com/papers/useR2010hpcTutorialHandout.pdf" class="uri">http://dirk.eddelbuettel.com/papers/useR2010hpcTutorialHandout.pdf</a></li>
 >>>>>>> abb0777... added more comments, fixed typos
+=======
+<li>Profiling details: <a href="http://dirk.eddelbuettel.com/papers/useR2010hpcTutorialHandout.pdf" class="uri">http://dirk.eddelbuettel.com/papers/useR2010hpcTutorialHandout.pdf</a></li>
+>>>>>>> 4d5bad8... typo fixes
 <li>Rprof: <a href="http://www.r-bloggers.com/profiling-r-code/" class="uri">http://www.r-bloggers.com/profiling-r-code/</a><br /></li>
 <li>ProfViz: <a href="https://rstudio.github.io/profvis/" class="uri">https://rstudio.github.io/profvis/</a></li>
 </ul>
@@ -205,6 +209,7 @@ test = pool.map(my_function,my_list_of_parameters) #in the example above, filena
 <h2>General Notes:</h2>
 <ul>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <li>This implementation is only possible when the iterations in the for loop are independent from each other, meaning there is no dependency of the following iteration to the result of the previous one.</li>
 <li>The RAM of the server is shared across the different processes running; it can be a limitation to the number of cores you can use if you are working with large data (on one machine).</li>
 <li>If you have nested for loops, you generally try to parallelize the outer one</li>
@@ -215,6 +220,12 @@ test = pool.map(my_function,my_list_of_parameters) #in the example above, filena
 <li>If you have nested for loops, you generally try to parallelize the outer one</li>
 <li>It is harder to debug parallel execution (for example print statements are not returned). Develop and test your code on a serial version first, then once the code does what you want, look into multicores options</li>
 >>>>>>> abb0777... added more comments, fixed typos
+=======
+<li>This implementation is only possible when the iterations in the for loop are independent from each other, meaning there is no dependency of the following iteration to the result of the previous one.</li>
+<li>The RAM of the server is shared across the different processes running; it can be a limitation to the number of cores you can use if you are working with large data (on one machine).</li>
+<li>If you have nested for loops, you generally try to parallelize the outer one</li>
+<li>It is harder to debug parallel execution (for example print statements are not returned). Develop and test your code on a serial version first, then once the code does what you want, look into multicore options</li>
+>>>>>>> 4d5bad8... typo fixes
 </ul>
 </div>
 <div id="references" class="section level2">
