@@ -68,7 +68,7 @@ img {
 <p>It is important to focus on parts of your code that are taking the most time. This process is called profiling. You can get more or less complex on how you do it and R has a lot of nice tools to help you. We do not have time to talk about this topic in this training, but here are few references to help you to get started:</p>
 <ul>
 <li>General tips about optimization and profiling: <a href="http://adv-r.had.co.nz/Profiling.html" class="uri">http://adv-r.had.co.nz/Profiling.html</a></li>
-<li>Profling more details: <a href="http://dirk.eddelbuettel.com/papers/useR2010hpcTutorialHandout.pdf" class="uri">http://dirk.eddelbuettel.com/papers/useR2010hpcTutorialHandout.pdf</a></li>
+<li>Profiling details: <a href="http://dirk.eddelbuettel.com/papers/useR2010hpcTutorialHandout.pdf" class="uri">http://dirk.eddelbuettel.com/papers/useR2010hpcTutorialHandout.pdf</a></li>
 <li>Rprof: <a href="http://www.r-bloggers.com/profiling-r-code/" class="uri">http://www.r-bloggers.com/profiling-r-code/</a><br /></li>
 <li>ProfViz: <a href="https://rstudio.github.io/profvis/" class="uri">https://rstudio.github.io/profvis/</a></li>
 </ul>
@@ -200,10 +200,10 @@ test = pool.map(my_function,my_list_of_parameters) #in the example above, filena
 <div id="general-notes" class="section level2">
 <h2>General Notes:</h2>
 <ul>
-<li>This implementation is only possible when the iterations in the for loop are independent from each other, meaning there is dependency of the following iteration to the result of the previous one.</li>
-<li>The RAM of the server is shared across the different processes running, it can be a limitation to the number of cores you can use if you are working with large data (on one machine).</li>
+<li>This implementation is only possible when the iterations in the for loop are independent from each other, meaning there is no dependency of the following iteration to the result of the previous one.</li>
+<li>The RAM of the server is shared across the different processes running; it can be a limitation to the number of cores you can use if you are working with large data (on one machine).</li>
 <li>If you have nested for loops, you generally try to parallelize the outer one</li>
-<li>It is harder to debug parallel execution (for example print statements are not returned). Develop and test your code on a serial version first, then once the code does what you want, look into multicores options</li>
+<li>It is harder to debug parallel execution (for example print statements are not returned). Develop and test your code on a serial version first, then once the code does what you want, look into multicore options</li>
 </ul>
 </div>
 <div id="references" class="section level2">
