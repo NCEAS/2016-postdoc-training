@@ -11,6 +11,7 @@ library(dplyr)
 
 
 
+
 # Set your working directory (contains folders with necessary data)
 setwd("/Users/brun/Data/Zillow")
 
@@ -58,6 +59,7 @@ price_sale3
 
 #### join list price and sale price tables ####
 
+
 # concatentate columns to create common column on which to perform join
 price_sale3$joinfield <- paste0(price_sale3$RegionName,'-',price_sale3$City,'-',price_sale3$year,'-',price_sale3$month)
 price_listing3$joinfield <- paste0(price_listing3$RegionName,'-',price_listing3$City,'-',price_listing3$year,'-',price_listing3$month)
@@ -93,3 +95,10 @@ axis(side=1,at=c(2013,2014,2015,2016), tick=T)
 boxplot(price_sale_med ~ Year, data = SB_subset,
         main = 'Median Sale Price for Houses in Santa Barbara County, CA',
         xlab = 'Year', ylab = 'Median List Price ($)', ylim=c(1e5,5e6))
+
+#summarise(price_listing3)
+
+# concatentate year and month column to create yearmonth column on which to perform join
+
+
+
