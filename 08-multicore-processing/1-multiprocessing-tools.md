@@ -13,7 +13,7 @@ It is important to focus on parts of your code that are taking the most time. Th
 
 Well, you are now working on a server, congrats!! What's the big deal?! Well you have a lot of cores waiting to help you to conduct your analysis. Awesome, well wait... are not scripting languages going through my codes sequentially by default?! Don't tell me I need to rewrite all my scripts!!!!
 
-No, you don't have to. There are low hanging fruits available to you to take advantages of multiple cores in your processing. Any for loop is an opportunity to distribute you work accross multiple cores. In R, any use of the apply family function might be an opportunity of leveraging multiprocessing. How? well as for most of the tasks there are packages and modules available to help you to do so.
+No, you don't have to. There are low hanging fruits available to you to take advantage of multiple cores in your processing. Any for loop is an opportunity to distribute you work accross multiple cores. In R, any use of the apply family function might be an opportunity for leveraging multiprocessing. How? As for most of the tasks, there are packages and modules available to help you.
 
 ## R
 To do multiprocessing you need to have multiple cores/CPUs available on you machine. If you do not know how many cores are available to you, you can use this:
@@ -23,7 +23,7 @@ library(doParallel)
 detectCores()
 ```
 ### mclapply 
-_Does not work on Windows!!_ [here](https://en.wikipedia.org/wiki/Fork–exec) to know why.
+_Does not work on Windows!!_ [Click here](https://en.wikipedia.org/wiki/Fork–exec) to know why.
 
 ```mclapply``` is the multiple core version of ```lapply```. It means anywhere you are using ```lapply```, you can try to substitute it with ```mclapply```.
 
@@ -154,10 +154,10 @@ test = pool.map(my_function,my_list_of_parameters) #in the example above, filena
 See script in annex for example. Try the same challenge: Can you improve its syntax?
 
 ## General Notes: 
-- This implementation is only possible when the iterations in the for loop are independent from each other, meaning there is dependency of the following iteration to the result of the previous one.
-- The RAM of the server is shared across the different processes running, it can be a limitation to the number of cores you can use if you are working with large data (on one machine).
+- This implementation is only possible when the iterations in the for loop are independent from each other, meaning there is no dependency of the following iteration to the result of the previous one.
+- The RAM of the server is shared across the different processes running; it can be a limitation to the number of cores you can use if you are working with large data (on one machine).
 - If you have nested for loops, you generally try to parallelize the outer one
-- It is harder to debug parallel execution (for example print statements are not returned). Develop and test your code on a serial version first, then once the code does what you want, look into multicores options
+- It is harder to debug parallel execution (for example print statements are not returned). Develop and test your code on a serial version first, then once the code does what you want, look into multicore options
 
 ## References
 ### R

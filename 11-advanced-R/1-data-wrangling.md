@@ -1,19 +1,19 @@
 # Data wrangling
 
-Data wrangling is the process of converting or mapping data from one "raw" form into another format that allows for more convenient analysis of the data with the help of semi-automated tools. In fact in our data era, a very large amount of time (80-90%) of the scientific worklow is dedicated to extract, clean, transform the raw data to allow the scientist to conduct its analaysis.
+Data wrangling is the process of converting or mapping data from one "raw" form into another format that allows for more convenient analysis with the help of semi-automated tools. In fact in our data era, a very large amount of time (80-90%) of the scientific worklow is dedicated to extracting, cleaning or transforming raw data to allow scientists to conduct analyses.
 
-Data wrangling helps you to implement the data model you have conceptualize to empower you to do your analaysis. 
+Data wrangling helps you to implement the data model you have conceptualized to empower you to do your analaysis. 
 
 
 ## Data wrangling in R
 
-We are going to look into two R packages `tidyr` and `dplyr` that are meant to work together to help you to do data wrangling in R. But before we go intp greater details, it is woth mentioning these packages are meant to leverage the `magrittr` operators that aims to make your code more humans readable.
+We are going to look into two R packages `tidyr` and `dplyr` that are meant to work together to help you to do data wrangling in R. But before we go into greater details, it is worth mentioning these packages are meant to leverage the `magrittr` operators that aim to make your code more human-readable.
 
 ![Hadley data science workflow](images/data_science_worflow.png)
 
 ### magrittr 
 
-**magrittr pipe operator `%>%` helps you to pipes the output of a previous operation as input to the following one**. 
+**magrittr pipe operator `%>%` helps you to pipe the output of a previous operation as input to the following one**. 
 
 ![magrittr](images/magrittr.png) 
 
@@ -27,14 +27,14 @@ The magrittr package, developped by Stefan Milton Bache, offers a set of operato
 
 ### tidyr - strcuture your data
 
-tidyr help you to structure your data in a "tidy" structure. For a dataset in the table format, the underlying data model is that ovbservations are rows and variables the columns. In other words, a dataset is messy or tidy depending on how rows, columns and tables are matched up with observations, variables and types. 
+tidyr helps you to structure your data in a "tidy" structure. For a dataset in table format, the underlying data model is that ovbservations are rows and variables are columns. In other words, a dataset is messy or tidy depending on how rows, columns and tables are matched up with observations, variables and types. 
 
 There are four fundamental functions of data tidying in tidyr:
 
 ![tidyr RStudio](images/tidyr.png)
 
-- **`gather()`**: takes multiple columns, and gathers them into key-value pairs: it makes “wide” data longer
-- **`spread()`**: takes two columns (key & value) and spreads in to multiple columns, it makes “long” data wider
+- **`gather()`**: takes multiple columns, and gathers them into key-value pairs; it makes “wide” data longer
+- **`spread()`**: takes two columns (key & value) and spreads into multiple columns; it makes “long” data wider
 - **`separate()`**: splits a single column into multiple columns
 - **`unite()`**: combines multiple columns into a single column
 
@@ -61,13 +61,14 @@ Don't forget **`group by`**!! group_by() groups data by categorical levels and c
 Use this script to investigate the popularity of your name!
 
 
-## Challenge - House market
+## Challenge - Housing market
 
-Zillow is a website providing information about houses for sale. It also collects a lot of data on real estate market. These data are available [here](http://www.zillow.com/research/data/). 
+Zillow is a website providing information about houses for sale. It also collects a lot of data on the real estate market. These data are available [here](http://www.zillow.com/research/data/). 
 
-Our goal is to investigate at the zipcode level the difference between the median listed price (price that people ask for their house) and the median sale price (price that the house end up being sold for) from Jan 2010 to May 2016. 
+Our goal is to investigate at the zipcode level the difference between the median listed price (price that people ask for their house) and the median sale price (price for which the house ends up being sold) from Jan 2010 to May 2016. 
 
-```{r zillow example, eval = FALSE}
+```r 
+{zillow example, eval = FALSE}
 price_listing_median <- read_csv("Zip_MedianListingPrice_AllHomes.csv")
 price_listing_median
 
@@ -90,7 +91,7 @@ Source: local data frame [10,390 x 83]
 
 ### By team of 2:
 
-- Investigate the data and come up with a strategy on how to clean these messy csv. Inspire yourself from the tidyr script we just looked at.
+- Investigate the data and come up with a strategy on how to clean the messy csv. Inspire yourself from the tidyr script we just looked at. Don't forget to set your working directory before loading the csv.
 - Create the pseudocode of the steps you need to do to be able to compute the difference listed price - sale price
 - Implement your strategy on both csv. Might be slightly different steps.
 - join and compute the difference listed price - sale price
