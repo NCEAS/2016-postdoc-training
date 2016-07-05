@@ -10,10 +10,9 @@ library(tidyr)
 library(dplyr)
 
 
-
-
 # Set your working directory (contains folders with necessary data)
 setwd("/Users/brun/Data/Zillow")
+#setwd('/Users/mccullough/Documents/postdoc-training/postdoc-training/11-advanced-R/data/Zillow')
 
 
 # read the data ----
