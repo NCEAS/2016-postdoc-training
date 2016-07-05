@@ -1,26 +1,29 @@
-# data source: Zillow : http://www.zillow.com/research/data/
+###########################################################################################
+# R data wrangling with Zillow housing data
+# Date modified: 7-5-16
+# Authors: Julien Brun (brun@nceas.ucsb.edu) and Ian McCullough (imccullough@bren.ucsb.edu)
+###########################################################################################
 
+# R packages
 library(readr)
 library(tidyr)
 library(dplyr)
 
+# Set your working directory (contains folders with necessary data)
 #setwd("/Users/brun/Data/Zillow")
 setwd('/Users/mccullough/Documents/postdoc-training/postdoc-training/11-advanced-R/data/Zillow')
 
 # read the data ----
+# data source: Zillow : http://www.zillow.com/research/data/
 # Listing Price
 price_listing_median <- read_csv("Zip_MedianListingPrice_AllHomes.csv")
-price_listing_median
+View(price_listing_median)
 
 # Sale price
 price_sale_median <- read_csv("Zip_MedianSoldPrice_AllHomes.csv")
-price_sale_median
+View(price_sale_median)
 
-colnames(price_listing_median)
-colnames(price_sale_median)
-
-ls()
-
+###### Main program ######
 # Listed price ----
 
 # To convert these messy data into tidy data
