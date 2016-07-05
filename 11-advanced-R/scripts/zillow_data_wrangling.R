@@ -59,7 +59,6 @@ price_sale3
 
 #### join list price and sale price tables ####
 
-
 # concatentate columns to create common column on which to perform join
 price_sale3$joinfield <- paste0(price_sale3$RegionName,'-',price_sale3$City,'-',price_sale3$year,'-',price_sale3$month)
 price_listing3$joinfield <- paste0(price_listing3$RegionName,'-',price_listing3$City,'-',price_listing3$year,'-',price_listing3$month)
@@ -98,7 +97,39 @@ boxplot(price_sale_med ~ Year, data = SB_subset,
 
 #summarise(price_listing3)
 
-# concatentate year and month column to create yearmonth column on which to perform join
+# concatentate columns to create common column on which to perform join
+price_sale3$joinfield <- paste0(price_sale3$RegionName,'-',price_sale3$City,'-',price_sale3$year,'-',price_sale3$month)
+price_listing3$joinfield <- paste0(price_listing3$RegionName,'-',price_listing3$City,'-',price_listing3$year,'-',price_listing3$month)
 
+# generate final table and calculate difference between list and sale price
+final_table <- left_join(price_sale3, price_listing3, by='joinfield')
+final_table <- na.omit(final_table)
+final_table$CostDiff <- final_table$price_list_med - final_table$price_sale_med
 
+#### plot time series of median list price for Santa Barbara County ####
+# subset final table to extract only Santa Barbara County data
+SB_subset <- subset(final_table, CountyName.x == 'Santa Barbara')
+
+# Make numeric year column (had been automatically converted to character format)
+SB_subset$Year <- as.numeric(SB_subset$year.x)
+
+# create basic plots of list price
+plot(price_list_med ~ Year, data = SB_subset, type='l',
+     main = 'Median List Price for Houses in Santa Barbara County, CA',
+     xlab = 'Year', ylab = 'Median List Price ($)', xaxt='n', ylim=c(1e5,5e6))
+axis(side=1,at=c(2013,2014,2015,2016), tick=T) # having suppressed xaxis with xaxt='n', we create our own axis with only the whole numbered years
+
+boxplot(price_list_med ~ Year, data = SB_subset,
+        main = 'Median List Price for Houses in Santa Barbara County, CA',
+        xlab = 'Year', ylab = 'Median List Price ($)', ylim=c(1e5,5e6))
+
+# create basic plots of sale price
+plot(price_sale_med ~ Year, data = SB_subset, type='l',
+     main = 'Median Sale Price for Houses in Santa Barbara County, CA',
+     xlab = 'Year', ylab = 'Median Sale Price ($)', xaxt='n', ylim=c(1e5,5e6))
+axis(side=1,at=c(2013,2014,2015,2016), tick=T)
+
+boxplot(price_sale_med ~ Year, data = SB_subset,
+        main = 'Median Sale Price for Houses in Santa Barbara County, CA',
+        xlab = 'Year', ylab = 'Median List Price ($)', ylim=c(1e5,5e6))
 
