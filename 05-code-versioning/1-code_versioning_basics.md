@@ -117,6 +117,74 @@ Let us have a closer look at the git workflow. It is important that a good porti
 
 ![](images/git_commands_workflow.png)
 
+### Example
+
+Navigate in the `snapp_workshop` repository you just created.
+
+1.) Let us create a csv file containing our name and favorite dessert:
+
+```
+vim favorite_dessert.csv
+```
+2.) Edit the new file adding headers and your info:
+
+Note: hit the key `i` to switch to *insert mode* in vim. My file would look like this
+
+```
+My name, My desert
+Julien, Ice cream
+```
+
+Exit the insert mode  `esc` 
+
+Exit vim and save `:wq`
+
+3.) Add the new file to git:
+
+```bash
+git status
+git add favorite_dessert.csv
+git status
+git commit -m "Julien's favorite desert"
+git status
+```
+4.) Add a friend to the csv:
+
+```bash
+vim favorite_dessert.csv
+
+My name, My desert
+Julien, Ice cream
+Eliott, Crepes
+```
+Save and exit vim
+
+5.) Add and commit the new version of the file
+
+```bash
+git status
+git add favorite_dessert.csv
+git status
+git commit -m "Adding Eliott's favorite desert"
+git status
+```
+
+6.) Check the differences between the two last commits:
+
+```
+git diff HEAD~1
+```
+
+Note: hit `q` to exit
+
+
+7.) We can also look at the log of commits to look a the commit sequence
+```
+git log
+
+git log -1
+```
+
 
 ## Getting information
 
@@ -127,8 +195,12 @@ To be used before committing to preview the changes to be committed.
 * `git diff HEAD~1 my_script.R` to inspect the changes between the last commit (HEAD) and the previous one
 * `git diff HEAD~2 my_script.py` to inspect the changes between the last commit (HEAD) and 2 commits before.
 
+Git has a lot of terms and commands, see reference at the end of this document for an extensive terminology.
 
-Git has a lot of terms and commands, see reference at the end of this document for an extensive terminology. Here
+## ![challenge](images/challengeproblemred_scribble.png) Challenge
+
+1. Add an additional person and commit the changes
+2. Add a column for the lastname and commit changes. Look at the differences between the files. What happened? 
 
 ## Ignoring certain types of file
 
@@ -144,6 +216,8 @@ vim .gitignore
 ```
 
 To know more: https://git-scm.com/docs/gitignore
+
+**Note:** GitHub has language specific gitignore files that you can select from https://github.com/github/gitignore  
 
 
 ## Undoing things
