@@ -12,8 +12,6 @@ So code is very useful to **keep track of changes you made to your scripts**. Co
 
 Today we are going to talk about the code verioning system calld `Git`. Note that there are others such as `Mercurial` and `svn` for example.
 
-
-
 ## What is git?
 
 <img style="float: right;width: 100px;" src="images/git_icon.png">
@@ -63,7 +61,7 @@ Before starting using git on any computer, you will have to set your identity as
 
 Your name and email: 
 
-```
+```bash
 git config --global user.name “yourName”
 git config --global user.email “yourEmail”
 ```
@@ -72,19 +70,19 @@ git config --global user.email “yourEmail”
 
 Check that everything is correct: 
 
-```
-git config --global
+```bash
+git config --list
 ```
 
 Modify everything at the same time:
 
-```
+```bash
 git config --global --edit
 ```
 
 Set your text editor: 
 
-```
+```bash
 git config --system core.editor vim
 ```
 
@@ -94,9 +92,9 @@ Want to know more? [here](https://git-scm.com/book/en/v2/Getting-Started-First-T
 
 A **git repository** is a folder on your machine in which content is monitored for any changes by git.
 
-```git init``` is the command to start the tracking in a specific directory and transform it into a git repository:
+`git init` is the command to start the tracking in a specific directory and transform it into a git repository:
 
-```
+```bash
 cd
 mkdir git_nceas
 cd git_nceas
@@ -104,9 +102,9 @@ mkdir snapp_workshop
 git init
 ```
 
-```git clone``` to copy an existing repository to your machine, more precisely adding the repository in the directory you are in.
+`git clone` to copy an existing repository to your machine, more precisely adding the repository in the directory you are in.
 
-```
+```bash
 cd 
 mkdir git_nceas
 cd git_nceas
@@ -122,25 +120,26 @@ Let us have a closer look at the git workflow. It is important that a good porti
 
 ## Getting information
 
-* ```git status``` this command is your friend! It will tell you where you are at and what are your options. You can use at any point in your process.
-* ```git log``` displays history of committed snapshots. It lets you list the project history, filter it, and search for specific changes.
-* ```git diff --cached```
+* `git status` this command is your friend! It will tell you where you are at and what are your options. You can use at any point in your process.
+* `git log` displays history of committed snapshots. It lets you list the project history, filter it, and search for specific changes.
+* `git diff --cached`
 To be used before committing to preview the changes to be committed. 
-* ```git diff HEAD~1 my_script.R``` to inspect the changes between the last commit (HEAD) and the previous one
-* ```git diff HEAD~2 my_script.py ``` to inspect the changes between the last commit (HEAD) and 2 commits before.
+* `git diff HEAD~1 my_script.R` to inspect the changes between the last commit (HEAD) and the previous one
+* `git diff HEAD~2 my_script.py` to inspect the changes between the last commit (HEAD) and 2 commits before.
 
 
 Git has a lot of terms and commands, see reference at the end of this document for an extensive terminology. Here
 
 ## Ignoring certain types of file
 
-```.gitignore``` is a specific file used to list what (type of) files you do not want git to track. This file need to be placed at the top level of the directory.
+`.gitignore` is a specific file used to list what (type of) files you do not want git to track. This file need to be placed at the top level of the directory.
 
 File content example from GitHub:
 https://gist.github.com/octocat/9257657 
 
 To create this file from the terminal/shell:
-```
+
+```bash
 vim .gitignore
 ```
 
@@ -151,18 +150,18 @@ To know more: https://git-scm.com/docs/gitignore
 
 ### Unstage a file
 
-```git reset HEAD``` lets you remove a file from the staging area
+`git reset HEAD` lets you remove a file from the staging area
 
-```
+```bash
 git reset HEAD <my_file_I_added_by_mistake.xls>
 ``` 
-This will remove the file from your next commit. Can be used to undo an erronous ```git add```.
+This will remove the file from your next commit. Can be used to undo an erronous `git add`.
 
 ### Undo your last commit
 
-```git commit --amend``` let you change your last commit, like for example if you forgot a file
+`git commit --amend` let you change your last commit, like for example if you forgot a file
 
-```
+```bash
 git add <missing_script.R>
 git commit --amend -m "My new message"
 ```

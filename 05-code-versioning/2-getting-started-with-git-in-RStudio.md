@@ -16,7 +16,8 @@ Now, you could have two situations:
 
 ### Create the RStudio Project
 
-* Choose *Existing Directory* from the wizard![image alt text](images/image_1.png)
+* Choose *Existing Directory* from the wizard
+![image alt text](images/image_1.png)
 
 * *Browse* to the main folder containing your data
 
@@ -38,11 +39,15 @@ Click *OK*. Answer *Yes* to the 2 following pop-ups to restart RStudio and enabl
 
 * Create a new Rstudio Project from the upper-right corner of the RStudio IDE window, choosing *New Project* 
 
-* Choose *New Directory* ![image alt text](images/image_4.png)Note: The Version control option at the bottom is only to be chosen when you want to clone an existing repository.
+* Choose *New Directory* 
+![image alt text](images/image_4.png)
+Note: The Version control option at the bottom is only to be chosen when you want to clone an existing repository.
 
-* Choose *Empty* *Project*![image alt text](images/image_5.png)
+* Choose *Empty* *Project*
+![image alt text](images/image_5.png)
 
-* Give your project (folder) a *name*, *Browse* for its location on your drive. Finally, check the option *Create a git repository *before clicking *Create Project*.**![image alt text](images/image_6.png)
+* Give your project (folder) a *name*, *Browse* for its location on your drive. Finally, check the option *Create a git repository *before clicking *Create Project*.*
+*![image alt text](images/image_6.png)
 
 Congratulations, you have a new project with git versioning enabled!!
 

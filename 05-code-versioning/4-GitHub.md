@@ -1,6 +1,6 @@
 # GitHub
 	
-You might also have heard of [GitHub](https://github.com). **GitHub is a company that hosts git repositories online** and provides several collaboration features. GitHub fosters a great user community and has built a nice graphical interface to git, adding great visualization capacities of your data.
+You might also have heard of [GitHub](https://github.com). **GitHub is a company that hosts git repositories online** and provides several collaboration features (among which `fork`). GitHub fosters a great user community and has built a nice graphical interface to git, adding great visualization capacities of your data.
 
 * **GitHub.com**: https://github.com
 * **SNAPP on GitHub.com**: https://github.com/Science-for-Nature-and-People
@@ -14,7 +14,8 @@ We are going to create a new repository on NCEAS GitHub instance. Note that is i
 
 URL: [https://github.nceas.ucsb.edu](https://github.nceas.ucsb.edu/)
 
-LOGIN: the instance uses NCEAS LDAP authentication (same as redmine, …). If you do not have an NCEAS account you can create one [here](https://identity.nceas.ucsb.edu/identity/cgi-bin/ldapweb.cgi?cfg=account).
+LOGIN: the instance uses NCEAS LDAP authentication (same as redmine, …). 
+If you do not have an NCEAS account you can create one [here](https://identity.nceas.ucsb.edu/identity/cgi-bin/ldapweb.cgi?cfg=account).
 
 
 ## Creating a new repo
