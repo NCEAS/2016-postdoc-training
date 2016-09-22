@@ -5,7 +5,6 @@ title: Coding best practices and tips
 author: "Julien Brun"
 date: "June, 2016"
 output: ioslides_presentation
-
 ---
 
 Coding best practices and tips

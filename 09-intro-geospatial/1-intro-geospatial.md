@@ -1,4 +1,9 @@
-# Intro to geospatial
+---
+title: Intro to geospatial
+author: "Revised by Julien Brun from Jim Regetz 2013"
+date: "June, 2016"
+output: html_document
+---
 
 # Demystifying _spatial_
 

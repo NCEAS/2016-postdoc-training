@@ -2,9 +2,9 @@
 layout: lesson
 root: ../..
 title: Regular Expressions
-author: "Matt Jones"
-date: "July 22, 2014"
-output: ioslides_presentation
+author: "Revised by Mark Schildhauer from Matt Jones 2014"
+date: "June, 2016"
+output: html_document
 ---
 
 ## Stand Back!
