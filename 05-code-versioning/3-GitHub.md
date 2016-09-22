@@ -1,3 +1,10 @@
+---
+title: "Multicore Processin"
+author: "Julien Brun"
+date: "June, 2016"
+output: html_document
+---
+
 <img style="align: left;width: 300px;" src=images/NCEAS_logo.png />
 
 GitHub
@@ -5,10 +12,10 @@ GitHub
 	
 You might also have heard of [GitHub](https://github.com). **GitHub is a company that hosts git repositories online** and provides several collaboration features (among which `fork`). GitHub fosters a great user community and has built a nice graphical interface to git, adding great visualization capacities of your data.
 
-* **GitHub.com**: https://github.com
-* **SNAPP on GitHub.com**: https://github.com/Science-for-Nature-and-People
-* **NCEAS on GitHub.com**: https://github.com/nceas
-* **NCEAS GitHub**: https://github.nceas.ucsb.edu/ ([you need to request access](https://help.nceas.ucsb.edu/git#getting_started_nceas_github_instance_using_rstudio))
+* **GitHub.com**: <https://github.com>
+* **SNAPP on GitHub.com**: <https://github.com/Science-for-Nature-and-People>
+* **NCEAS on GitHub.com**: <https://github.com/nceas>
+* **NCEAS GitHub**: <https://github.nceas.ucsb.edu/> ([you need to request access](https://help.nceas.ucsb.edu/git#getting_started_nceas_github_instance_using_rstudio))
 
 
 ## NCEAS GitHub Instance

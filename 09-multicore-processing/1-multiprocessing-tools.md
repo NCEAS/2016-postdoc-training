@@ -1,3 +1,10 @@
+---
+title: "Multicore Processin"
+author: "Julien Brun"
+date: "June, 2016"
+output: html_document
+---
+
 # Optimizing your code
 
 ## Where are the bottle necks?
