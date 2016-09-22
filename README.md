@@ -21,7 +21,7 @@ This intensive 4-day workshop on *Computational and Collaboration Skills for Int
 
 order  |  Module Name  |  Lesson  |  Preparation Status
 ------ |  -----------  |  -------- |  ------------------ 
-00     | Collaborative Tools| [collaborative tools](00-collaborative-tools/1-virtual-collaboration.md) | Adapted
+00     | Introduction| presentations | Created
 01  | Command line  |  [command-line](01-command-line/1-command-line.md)  |  Need to add command examples
 01  | Command line  |  [vim](01-command-line/2-vim.md) |  Adapted   
 01  | Command line  |  [bash loops](01-command-line/3-bash-loops.md) |  Ready 
@@ -29,7 +29,7 @@ order  |  Module Name  |  Lesson  |  Preparation Status
 02  | Working remote | [servers and networks](02-working-remote/1-servers-and-networks.md)  |  Adapted
 02  | Working remote | [ssh](02-working-remote/2-ssh-tmux.md) | Adapted
 02  | Working remote | [alternative ways to connect to Aurora](02-working-remote/3-working-remote-alternatives.md) | Created 
-03  | Collaborative Science | [Collaborative Tools](00-collaborative-tools/virtual-collaboration.md) | Gathered information from OSS
+03  | Collaborative Science | [Collaborative Tools](03-collaborative-science/1-virtual-collaboration.md) | Adapted information from OSS
 04  | Introduction to R | [R basics](04-Intro-R/1-R-basics.Rmd) | Created
 04  | Introduction to R | [flow control (loops, conditions, ..)](04-Intro-R/2-R-control.Rmd) | Created
 04  | Introduction to R | [getting help](04-Intro-R/3-rhelp.md) | Gathered from OSS 
