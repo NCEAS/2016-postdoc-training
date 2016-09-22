@@ -29,8 +29,7 @@ Visual
 
 # The keyboard is your friend
 
-![](images/vi-vim-cheat-sheet.gif
-    "http://www.viemu.com/vi-vim-cheat-sheet.gif")
+![](images/vi-vim-cheat-sheet.gif)
 
 # For the impatient
 
@@ -63,7 +62,7 @@ Visual
 **Jumping**
 
 - to start/end of line: `0/$`
-- to start/end of file: `gg/G`
+- to first/last line of file: `gg/G`
 - to a character on current line: `f/F{char}`
 - to identical word: `*/#`
 - to line number: `:{#}` or `{#}G`
@@ -95,6 +94,7 @@ Visual
 # Copy and paste
 
 - copy ("yank") -- `y{motion}`
+- copy ("yank") -- 
 - paste after cursor -- `p`
 - paste before cursor -- `P`
 
@@ -131,43 +131,37 @@ Visual
 
 # Basic editing
 
-![](images/vi-vim-tutorial-1.gif
-"http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html")
+![http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html](images/vi-vim-tutorial-1.gif)
 
 
 # Operators and repetition
 
-![](images/vi-vim-tutorial-2.gif
-"http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html")
+![http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html](images/vi-vim-tutorial-2.gif)
 
 # Yank & paste
 
-![](images/vi-vim-tutorial-3.gif
-"http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html")
+![http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html](images/vi-vim-tutorial-3.gif)
 
 # Searching
 
-![](images/vi-vim-tutorial-4.gif
-"http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html")
+![http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html](images/vi-vim-tutorial-4.gif
+)
 
 # Marks & macros
 
-![](images/vi-vim-tutorial-5.gif
-"http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html")
+![http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html](images/vi-vim-tutorial-5.gif)
 
 # Various motions
 
-![](images/vi-vim-tutorial-6.gif
-"http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html")
+![http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html](images/vi-vim-tutorial-6.gif)
 
 # Various commands
 
-![](images/vi-vim-tutorial-7.gif
-"http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html")
+![http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html](images/vi-vim-tutorial-7.gif)
 
 # Places to learn
 
-> * The [pictorial cheatsheets](
+ * The [pictorial cheatsheets](
   http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html)
   used in this slide
     - [Color PDF of all 8 diagrams](
@@ -176,7 +170,7 @@ Visual
     http://jmcpherson.org/editing.html)
 * A popular portal to [the rest of the vim universe](
       http://thomer.com/vi/vi.html)
-* A bit heavy-handed for my taste, but if you really like learning by
+* A bit heavy-handed, but if you really like learning by
       [watching over someone's shoulder](
       http://www.linuxconfig.org/Vim_Tutorial)...
 * Lastly, if you just want to learn [how to start *and* quit vim all in

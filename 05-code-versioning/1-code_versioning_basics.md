@@ -1,3 +1,5 @@
+<img style="align: left;width: 250px;" src=images/NCEAS_logo.png />
+
 # Code versioning - Git Basics
 
 
@@ -5,8 +7,7 @@
 
 Well let's start with a great example:
 
-![http://www.phdcomics.com/comics/archive.php?comicid=1531](images/phd_comics_final.png) 
-
+<img style="align: left;width: 420px;" src=images/phd_comics_final.png />
 
 So code is very useful to **keep track of changes you made to your scripts**. Code versioning allows you to choose when you have reached a stage in your code that you think is worth keeping track of, like a new function that makes your data analysis soooooo much better. For scientists, git is a useful tool to help you to track changes you make to your scripts and enable you to share your codes with your collaborators. For example, if you break your code, git can help you to revert to an earlier working version. Want one of your collaborators to add a feature to your code to do a specific analysis? Code versioning can help you to do so in a smooth and organized manner.
 
@@ -28,7 +29,7 @@ Git is a *free* and *open source* distributed *version control system*. It has m
 
 ## What git is not
 - Git is not a backup per se
-- Git is not GitHub (or more accuralty the opposit way: GitHub is not Git)
+- Git is not GitHub (or more exactly: GitHub is not Git)
 - it is not good at storing large data (by default)
 
 
@@ -71,7 +72,7 @@ git config --global user.email “yourEmail”
 Check that everything is correct: 
 
 ```bash
-git config --list
+git config --global --list
 ```
 
 Modify everything at the same time:
@@ -171,7 +172,7 @@ git status
 
 6.) Check the differences between the two last commits:
 
-```
+```bash
 git diff HEAD~1
 ```
 
@@ -179,12 +180,12 @@ Note: hit `q` to exit
 
 
 7.) We can also look at the log of commits to look a the commit sequence
-```
+
+```bash
 git log
 
 git log -1
 ```
-
 
 ## Getting information
 
@@ -195,12 +196,8 @@ To be used before committing to preview the changes to be committed.
 * `git diff HEAD~1 my_script.R` to inspect the changes between the last commit (HEAD) and the previous one
 * `git diff HEAD~2 my_script.py` to inspect the changes between the last commit (HEAD) and 2 commits before.
 
+
 Git has a lot of terms and commands, see reference at the end of this document for an extensive terminology.
-
-## ![challenge](images/challengeproblemred_scribble.png) Challenge
-
-1. Add an additional person and commit the changes
-2. Add a column for the lastname and commit changes. Look at the differences between the files. What happened? 
 
 ## Ignoring certain types of file
 
@@ -215,9 +212,7 @@ To create this file from the terminal/shell:
 vim .gitignore
 ```
 
-To know more: https://git-scm.com/docs/gitignore
-
-**Note:** GitHub has language specific gitignore files that you can select from https://github.com/github/gitignore  
+To know more: <https://git-scm.com/docs/gitignore>
 
 
 ## Undoing things
@@ -249,12 +244,20 @@ More info about how to undo things [here](https://git-scm.com/book/en/v2/Git-Bas
 
 
 ## References
-- Interactive git 101: https://try.github.io/ 
-- Very good tutorial about git: https://www.atlassian.com/git/tutorials/what-is-version-control
-- Git tutorial geared towards scientits: http://nyuccl.org/pages/gittutorial/
-- Short intro to git basics: https://github.com/mbjones/gitbasics
-- Git documentation about the basics: http://gitref.org/basic/
-- Git documentation - the basics: https://git-scm.com/book/en/v2/Getting-Started-Git-Basics
-- Git terminology: https://www.atlassian.com/git/glossary/terminology
-- NCEAS wiki page on git: https://help.nceas.ucsb.edu/git?s[]=git
-- In trouble, guide to know what to do: http://justinhileman.info/article/git-pretty/git-pretty.png
+- Interactive git 101: [https://try.github.io/](https://try.github.io/)
+- Very good tutorial about git: [https://www.atlassian.com/git/tutorials/what-is-version-control](https://www.atlassian.com/git/tutorials/what-is-version-control)
+- Git tutorial geared towards scientits: [http://nyuccl.org/pages/gittutorial/](http://nyuccl.org/pages/gittutorial/)
+- Short intro to git basics: [https://github.com/mbjones/gitbasics](https://github.com/mbjones/gitbasics)
+- Git documentation about the basics: [http://gitref.org/basic/](http://gitref.org/basic/)
+- Git documentation - the basics: [https://git-scm.com/book/en/v2/Getting-Started-Git-Basics](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics)
+- Git terminology: [https://www.atlassian.com/git/glossary/terminology](https://www.atlassian.com/git/glossary/terminology)
+- NCEAS wiki page on git: [https://help.nceas.ucsb.edu/git?s[]=git](https://help.nceas.ucsb.edu/git?s[]=git)
+- In trouble, guide to know what to do: [http://justinhileman.info/article/git-pretty/git-pretty.png](http://justinhileman.info/article/git-pretty/git-pretty.png)
+
+## License
+
+National Center for Ecological Analysis and Synthesis, NCEAS, UCSB
+
+Copyright the Regents of the University of California, 2016
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.

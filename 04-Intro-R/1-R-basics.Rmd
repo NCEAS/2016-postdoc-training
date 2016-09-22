@@ -35,9 +35,15 @@ RStudio is an Integrated Development Environment (IDE). It enables you to work a
 
 There are 5 main types: double, integer, complex, logical and character.
 
-## Which one of these R commands you do not know??
+## Which one of these R commands you do not know?
 
 ```{r vocabulary math, eval = FALSE}
+
+# Comparison 
+all.equal, identical
+!=, ==, >, >=, <, <=
+is.na, complete.cases
+is.finite
 
 # Basic math
 *, +, -, /, ^, %%, %/%
@@ -57,12 +63,6 @@ mean, median, cor, sd, var
 all, any
 intersect, union
 which
-
-# Comparison 
-all.equal, identical
-!=, ==, >, >=, <, <=
-is.na, complete.cases
-is.finite
 ```
 
 
@@ -81,11 +81,9 @@ x %/% y          # like this one
 x %% y           # modulo
 ```
 
-x, y and z in the above example are called variables. In R you *assign* to the local environment values to variables using `<-`. Note `=` also exists, but behave slightly differently. **We recommend to use `<-`.** See [here](http://stackoverflow.com/questions/1741820/assignment-operators-in-r-and) if you want to know more about the differences.
+x, y and z in the above example are called variables. In R you *assign* to the local environment values to variables using `<-`. Note `=` also exists, but behave slightly differently. We recommend to use `<-`. See [here](http://stackoverflow.com/questions/1741820/assignment-operators-in-r-and) if you want to know more about the differences.
 
-![tips](images/tip.png) Did you know you that in RStudio you can use `alt` + `-` to write `<-`?
-
-Big fan of keyboard shortcuts? Check out _Tools → Keyboard Shortcuts Help_.
+![tips](images/tip.png) Did you know you that in RStudio you can use `alt`+ `-` to write `<-`?
 
 ## Characters
 ```{r, eval = FALSE}
@@ -176,7 +174,7 @@ a <- c(1,2,3)
 b <- c("a", "b", "c")
 ```
 
-All *elements of an atomic vector must be the same type*, so when you attempt to combine different types they will be **coerced** to the most flexible type. Types from least to most flexible are: logical, integer, double, and character.
+All *elements of an atomic vector must be the same type*, so when you attempt to combine different types they will be **coerced** to the most flexible type. Types from least to most flexible are: logical, integer, double, and character
 
 ```{r coersion, eval= FALSE}
 #combine the two, what do you get?
@@ -186,7 +184,7 @@ typeof(ab)
 
 ### b. List
 
-You construct an atomic vector using `list()`.
+You construct an atomic vector using ```list() ```.
 
 The elements of a list can be of different types. List can be nested (list of lists). 
 
@@ -207,7 +205,7 @@ High-dimensional generalisations:
 
 ## Data frame - most common 
 
-You construct a data frame using `data.frame()`:
+You construct an atomic vector using `data.frame()`. 
 
 ```{r, dataframe, eval = FALSE}
 d <- data.frame(a = c(1,2,3,4,5), 
@@ -308,7 +306,7 @@ setwd("~/snapp-workshop/introR")
 
 ## Note on how to build a path in R:
 
-To construct a path to a file, it is recommended to use `file.path` and not `paste` as it will take care of the dfifferent path convention bewteen OS and it is faster.
+To construct a path to a file, it is recommended to use `file.path` and not `paste` as it will take care of the dfifferent path convention bewteen OS and it id faster.
 
 
 # Input / output operations (I/O)
@@ -322,7 +320,8 @@ head(df)
 tail(df)
 ```
 
-Note: by default these function will transform your column type as factors (variables in R which take on a limited number of different values). This often something you do not want. You can specify this by adding the option `stringsAsFactors = FALSE`:
+
+Note: by default these function will transform your column typa as factors (variables in R which take on a limited number of different values). This often something you do not want. You can specify this by adding the option `stringsAsFactors = FALSE`:
 
 ```{r, eval = FALSE}
 df2 <- read.table("data/gapminderDataFiveYear.txt", header = TRUE, sep = "\t", stringsAsFactors = FALSE)
@@ -404,6 +403,7 @@ head(babynames)
 Note: Files stored with `saveRDS()` are automatically compressed.
 
 
+
 # Missing data
 
 Missing data are represented by `NA` in R. 
@@ -422,6 +422,7 @@ is.na(v)
 sum(is.na(v))
 
 ```
+
 
 NAs "propagate", meaning if you try to compute something on an object including NAs, it will return NA
 

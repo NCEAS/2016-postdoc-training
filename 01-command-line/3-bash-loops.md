@@ -2,14 +2,14 @@
 layout: lesson
 root: ../..
 title: Loops in Bash
-author: "Matt Jones"
-date: "July 22, 2014"
-output: ioslides_presentation
+author: "Revised by Mark Schildhauer from Matt Jones 2014"
+date: "June, 2016"
+output: html_document
 ---
 
 ## Loops tutorial objective
 
-- Learn why its useful to use loops
+- Learn why it's useful to use loops
 - Practice basic loop syntax
 
 ## Why loops
@@ -80,11 +80,25 @@ $ for filename in *.csv
 #!/bin/bash
 
 # Example of a simple shell script
-# Do not really use this for backup!
+# Makes copy of files specified, with "backup-" 
+# appended to original filename
+
 PREFIX="backup-"
 FILES=$@
+# Above parameters of "$@" expand out 
+# to positional parameters-- e.g. file1, file2
+
 for file in $FILES
 do
     cp $file $PREFIX$file
 done
 ```
+* Store above bash script in filename of your choosing, e.g. "batch-rename"
+* Make "batch-rename" file executable: `chmod 755 batch-rename`
+* Execute script: `./batch-rename *`
+* All files in current directory will now have a copy that is prefixed "backup-**original-name**"
+
+
+## Online resources
+
+* http://www.tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html/

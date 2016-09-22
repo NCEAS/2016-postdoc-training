@@ -3,10 +3,7 @@ title: "Introduction to R"
 author: "Julien Brun"
 date: "June, 2016"
 output:
-  html_document:
-    toc: true
-    toc_depth: 2
-    toc_float: true
+  html_document
 ---
 
 *Attribution*: this tutorial is an adaptation of the material prepared by Karthik Ram for NCEAS [summer school 2013]
@@ -67,10 +64,30 @@ Note:  The `break` function is used to break out of loops, and `next` halts the 
 
 **Challenge**: write a script that sequentially print to the screen the squared value of the following sequence, but exit the loop if the value is larger than 140.
 
+Here is the code to generate the sequence:
 ```{r for loops challenge, eval = FALSE}
 set.seed(123)
 s <- rnorm(1:100, mean = 100, sd = 20)
 ```
+
+# While
+```{r while loops, eval = FALSE}
+# Structure
+while (condition) {
+    statements
+}
+
+i <- 0
+while (i < 10) {
+  print(i)
+  i = i + 1 # Do not forget to update your condidion
+}
+
+```
+
+![](images/challengeproblemred_scribble.png)
+
+**Challenge**: redo the challenge using a while loop!
 
 
 # Learning the apply family of functions
@@ -136,7 +153,6 @@ class(l)
 
 `sapply` is a more user friendly version of `lapply` and will return a list of matrix where appropriate.
 
-
 Let's work with the same list we just created.
 
 ```{r, eval = TRUE}
@@ -160,7 +176,7 @@ The final arguments turns the result into a vector or matrix if possible.
 ## mapply
 Its more or less a multivariate version of `sapply`. It applies a function to all corresponding elements of each argument. 
 
-example:
+Example:
 
 ```{r, eval = TRUE}
 list_1 <- list(a = c(1:10), b = c(11:20))

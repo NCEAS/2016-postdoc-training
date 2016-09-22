@@ -19,7 +19,7 @@ Examples
 
 - `foo` matches _foo_
 - `[fb]oo` matches _foo_ and _boo_
-- `fo*` matches _f_, _fo_, _foo_, ...
+- `f*` matches _f_, _fo_, _foo_, ...
 
 ## Why is this useful?
 
@@ -45,6 +45,14 @@ $ sed '/^M/ d' paleo-mammals.txt
 $ sed '/M$/ d' paleo-mammals.txt
 $ sed '/Ca.*/ s/K$/M/g' paleo-mammals.txt
 ```
+Above examples do this, respectively:
+
+* corrects spelling of "Mammuthus" to "Mamuthus" wherever it occurs in file
+* deletes any line in file that **contains** a capital "M" 
+* deletes any line in file that **starts** with a capital "M"
+* deletes any line in file that **ends** with a capital "M"
+	* why didn't it change entry for "Canis dirus"
+		* (hint: use `od` to understand why)
 
 ## Places you might encounter regexes
 
@@ -89,12 +97,8 @@ Utilities
     - `foo|bar` ...one of two possible patterns
 
 
-## Escaping
+## Regexp are powerful and extremely useful, BUT can get Complex
 
-* What does `a+` match?
-    - is it the literal {`a+`}?
-    - or is it {`a`, `aa`, `aaa`, ...}?
-    - answer: it [depends](http://www.regular-expressions.info/refflavors.html)!
 
 * Here are the usual _metacharacters_:
     - `{ } [ ] ( ) ^ $ . | * + ? \`
@@ -102,12 +106,9 @@ Utilities
 * When in doubt, test your pattern!
     - try both `a+` and `a\+`
 
-## Other things
-
-* Modifiers
-* Greediness
-* Grouping
-* Backreferences
+* Can match almost any text pattern
+    
+* Consult references!!
 
 
 ## Links
