@@ -1,3 +1,12 @@
+---
+title: "Introduction to RStudio (server)"
+author: "Ian McCullough and Julien Brun"
+date: "Sept, 2016"
+output:
+  html_document
+---
+
+
 <img style="align: left;width: 300px;" src=images/NCEAS_logo.png />
 
 # Getting familiar with RStudio
