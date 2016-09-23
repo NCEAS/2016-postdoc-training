@@ -35,7 +35,7 @@ order  |  Module Name  |  Lesson  |  Preparation Status  | Next step
 04  | [Introduction to R](04-Intro-R/) | [getting help](04-Intro-R/3-rhelp.md) | Gathered from OSS | Add a section on vignettes
 04  | [Introduction to R](04-Intro-R/) | [RStudio](04-Intro-R/5-RStudio.md) | Created
 05  | [Code Versioning](05-code-versioning/)  | [git basics](05-code-versioning/1-code_versioning_basics.md) | Created | 
-05  | [Code Versioning](05-code-versioning/)  | [git remote](05-code-versioning/2-code-versioning-remote.md) | Created | Add more example on undoing things
+05  | [Code Versioning](05-code-versioning/)  | [git remote](05-code-versioning/2-code-versioning-remote.md) | Created | Add more example on undoing things;  Add `git pull --rebase`?
 05  | [Code Versioning](05-code-versioning/)  | [GitHub](05-code-versioning/3-GitHub.md) | Created | Add a section on the push/pull vs fork/pull request workflows and collaboration
 05  | [Code Versioning](05-code-versioning/)  | [using git from RStudio](05-code-versioning/4-getting-started-with-git-in-RStudio.md) | Created |
 06  | [Code best Practices](06-code-best-practices/) | [Code best practices and scoping](1-coding-best-practices-general-tips.md) | Created | Add examples for Python
