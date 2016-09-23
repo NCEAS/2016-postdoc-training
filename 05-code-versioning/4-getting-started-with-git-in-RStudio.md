@@ -112,6 +112,7 @@ Once you have finished the pull process, you can click on the `push` button to u
 - RStudio keyboard shortcuts: [https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts](https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts)
 - Debugging with R Studio: [https://support.rstudio.com/hc/en-us/articles/205612627-Debugging-with-RStudio](https://support.rstudio.com/hc/en-us/articles/205612627-Debugging-with-RStudio)  
 - Using git from RStudio: [https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN)
+- Tips on using git and GitHub from RStudio, Hadley Wickham's [R packages](http://r-pkgs.had.co.nz/git.html#git-pull) book
 
 ## License
 
