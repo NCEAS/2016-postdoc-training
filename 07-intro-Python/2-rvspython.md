@@ -1,4 +1,11 @@
-#R versus Python - Round 1
+---
+title: Quick dive into Python
+author: "Adapted by Julien Brun from material prepared by Michael Stealey material for the OSS14"
+date: "June, 2016"
+output: html_document
+---
+
+# R versus Python - Round 1
 
 Revised from Michael Stealey material for the OSS14
 

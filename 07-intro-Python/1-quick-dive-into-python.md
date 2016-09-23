@@ -1,6 +1,6 @@
 ---
 title: Quick dive into Python
-author: "Julien Brun"
+author: "Adapted by Julien Brun from material prepared by Michael Stealey for OSS 14 and Python documentation."
 date: "June, 2016"
 output: html_document
 ---
