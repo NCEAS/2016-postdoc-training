@@ -19,37 +19,38 @@ This intensive 4-day workshop on *Computational and Collaboration Skills for Int
 
 ## Modules status
 
-order  |  Module Name  |  Lesson  |  Preparation Status
------- |  -----------  |  -------- |  ------------------ 
-00     | Introduction| presentations | Created
-01  | Command line  |  [command-line](01-command-line/1-command-line.md)  |  Need to add command examples
-01  | Command line  |  [vim](01-command-line/2-vim.md) |  Adapted   
-01  | Command line  |  [bash loops](01-command-line/3-bash-loops.md) |  Ready 
-01  | Command line  |  [regular expression](01-command-line/4-regular-expressions.md) |  Adapted 
-02  | Working remote | [servers and networks](02-working-remote/1-servers-and-networks.md)  |  Adapted
-02  | Working remote | [ssh](02-working-remote/2-ssh-tmux.md) | Adapted
-02  | Working remote | [alternative ways to connect to Aurora](02-working-remote/3-working-remote-alternatives.md) | Created 
-03  | Collaborative Science | [Collaborative Tools](03-collaborative-science/1-virtual-collaboration.md) | Adapted information from OSS
-04  | Introduction to R | [R basics](04-Intro-R/1-R-basics.Rmd) | Created
-04  | Introduction to R | [flow control (loops, conditions, ..)](04-Intro-R/2-R-control.Rmd) | Created
-04  | Introduction to R | [getting help](04-Intro-R/3-rhelp.md) | Gathered from OSS 
-04  | Introduction to R | [RStudio](04-Intro-R/5-RStudio.md) | Created
-05  | Code Versioning  | [git basics](05-code-versioning/1-code_versioning_basics.md) | Created
-05  | Code Versioning  | [git remote](05-code-versioning/2-code-versioning-remote.md) | Created
-05  | Code Versioning  | [GitHub](05-code-versioning/3-GitHub.md) | Created
-05  | Code Versioning  | [using git from RStudio](05-code-versioning/4-getting-started-with-git-in-RStudio.md) | Created
-06  | Code best Practices | [Code best practices and scoping](1-coding-best-practices-general-tips.md) | Created
-07  | Introduction to Python | [quick dive into Python](07-intro_Python/1-quick-dive-into-python.md) | Adapted from OSS
-08  |  Advanced R | [Data Wrangling (dplyr & tidyr)](08-advanced-R/1-data-wrangling.Rmd) | Created
-09  |  Using multiple cores | [multicore processing](09-multicore-processing/1-multiprocessing-tools.md) | Need to finish Python example
-09  | Intro to geospatial | [GIS concepts](10-intro-geospatial/1-intro-geospatial.md)| Adapted
-09  | Intro to geospatial | [QGIS](10-intro-geospatial/2-qgis.md) | Adapted
-09  | Intro to geospatial | [Processing rasters on Aurora with R](10-intro-geospatial/3-tips-Rraster-on-Aurora.md) | Created
-09  | Intro to geospatial | [R raster](https://github.nceas.ucsb.edu/Training/2016-postdoc-training/blob/master/10-intro-geospatial/4-r-spatial-example.R) | Gathered from OSS
-09  | Intro to geospatial | [PostGIS](https://github.nceas.ucsb.edu/Training/2016-postdoc-training/blob/master/10-intro-geospatial/5-postgis_example.txt) | Gathered from OSS
-10  | Open Science | intro to KNB | Live demo by Lauren Palmer 
-11  | Data Modeling and Semantics | | Ask presentations from Mark
-12  | Data visualization | | Not done
+order  |  Module Name  |  Lesson  |  Preparation Status  | Next step
+------ |  -----------  |  -------- |  ------------------ | -----------
+00     | [Introduction](00-introduction/) | presentations | Created
+01  | [Command line](01-command-line/)  |  [command-line](01-command-line/1-command-line.md)  |  Adapated | Need to add command examples
+01  | [Command line](01-command-line/)  |  [vim](01-command-line/2-vim.md) |  Adapted  |  Add a challenge
+01  | [Command line](01-command-line/)  |  [bash loops](01-command-line/3-bash-loops.md) |   Ready 
+01  | [Command line](01-command-line/)  |  [regular expression](01-command-line/4-regular-expressions.md) |  Adapted | Add more examples
+02  | [Working remote](02-working-remote/) | [servers and networks](02-working-remote/1-servers-and-networks.md)  |  Adapted
+02  | [Working remote](02-working-remote/) | [ssh](02-working-remote/2-ssh-tmux.md) | Adapted | Extend with basic shell commands for file management
+02  | [Working remote](02-working-remote/) | [alternative ways to connect to Aurora](02-working-remote/3-working-remote-alternatives.md) | Created 
+03  | [Collaborative Science](03-collaborative-science/) | [Collaborative Tools](03-collaborative-science/1-virtual-collaboration.md) | Adapted information from OSS
+04  | [Introduction to R](04-Intro-R/) | [R basics](04-Intro-R/1-R-basics.Rmd) | Created | Add examples of what you can do with R at the beginning (motivation)
+04  | [Introduction to R](04-Intro-R/) | [flow control (loops, conditions, ..)](04-Intro-R/2-R-control.Rmd) | Created | Add challenge
+04  | [Introduction to R](04-Intro-R/) | [getting help](04-Intro-R/3-rhelp.md) | Gathered from OSS | Add a section on vignettes
+04  | [Introduction to R](04-Intro-R/) | [RStudio](04-Intro-R/5-RStudio.md) | Created
+05  | [Code Versioning](05-code-versioning/)  | [git basics](05-code-versioning/1-code_versioning_basics.md) | Created | 
+05  | [Code Versioning](05-code-versioning/)  | [git remote](05-code-versioning/2-code-versioning-remote.md) | Created | Add more example on undoing things
+05  | [Code Versioning](05-code-versioning/)  | [GitHub](05-code-versioning/3-GitHub.md) | Created | Add a section on the push/pull vs fork/pull request workflows and collaboration
+05  | [Code Versioning](05-code-versioning/)  | [using git from RStudio](05-code-versioning/4-getting-started-with-git-in-RStudio.md) | Created |
+06  | [Code best Practices](06-code-best-practices/) | [Code best practices and scoping](1-coding-best-practices-general-tips.md) | Created | Add examples for Python
+07  | [Introduction to Python](07-intro-Python/) | [quick dive into Python](07-intro_Python/1-quick-dive-into-python.md) | Adapted from OSS | Add motivations example and challenge
+07  | [Introduction to Python](07-intro-Python/) | [R vs Python](07-intro_Python/2-rvspython.md) | Adapted from OSS | 
+08  |  [Advanced R]() | [Data Wrangling (dplyr & tidyr)](08-advanced-R/1-data-wrangling.Rmd) | Created | Finalize the Zillow example; switch to States
+09  |  [Using multiple cores](09-multicore-processing/) | [multicore processing](09-multicore-processing/1-multiprocessing-tools.md) | Created | Need to finish Python example
+09  | [Intro to geospatial](10-intro-geospatial/) | [GIS concepts](10-intro-geospatial/1-intro-geospatial.md)| Adapted | Developp raster - vector formats explanation
+09  | [Intro to geospatial](10-intro-geospatial/) | [QGIS](10-intro-geospatial/2-qgis.md) | Adapted | Add the zillow example to connect with the data wrangling session
+09  | [Intro to geospatial](10-intro-geospatial/) | [Processing rasters on Aurora with R](10-intro-geospatial/3-tips-Rraster-on-Aurora.md) | Created | Already obselete
+09  | [Intro to geospatial](10-intro-geospatial/) | [R raster](https://github.nceas.ucsb.edu/Training/2016-postdoc-training/blob/master/10-intro-geospatial/4-r-spatial-example.R) | Gathered from OSS - not used | To be updated; check with Cassey and Jamie?
+09  | [Intro to geospatial](10-intro-geospatial/) | [PostGIS](https://github.nceas.ucsb.edu/Training/2016-postdoc-training/blob/master/10-intro-geospatial/5-postgis_example.txt) | Gathered from OSS -  not used | To be updated
+10  | [Open Science](11-open-science/) | intro to KNB | Live demo by Lauren Palmer | Update the Data upload exercise
+11  | Data Modeling and Semantics | | Ask presentations from Mark | Add challenge?
+12  | Data visualization | Sam did a demo of her shiny app | Not done | To be created
  
 
 ## License
