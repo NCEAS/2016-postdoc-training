@@ -253,6 +253,7 @@ More info about how to undo things [here](https://git-scm.com/book/en/v2/Git-Bas
 - Git terminology: [https://www.atlassian.com/git/glossary/terminology](https://www.atlassian.com/git/glossary/terminology)
 - NCEAS wiki page on git: [https://help.nceas.ucsb.edu/git?s[]=git](https://help.nceas.ucsb.edu/git?s[]=git)
 - In trouble, guide to know what to do: [http://justinhileman.info/article/git-pretty/git-pretty.png](http://justinhileman.info/article/git-pretty/git-pretty.png)
+- Want to undo something? <https://github.com/blog/2019-how-to-undo-almost-anything-with-git> 
 
 ## License
 
