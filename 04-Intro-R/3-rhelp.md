@@ -31,7 +31,9 @@ Finding help on R
 * twitter: #rstats
 
 ## Repositories
-* Comprehensive R Archive Network (CRAN)
+* Comprehensive R Archive Network (CRAN): <https://cran.r-project.org/>
+* CRAN task views: <https://cran.r-project.org/web/views/>
+* R documentation website: <https://www.rdocumentation.org/>
 * R-forge
 * Bioconductor
 * GitHub

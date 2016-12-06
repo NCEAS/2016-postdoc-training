@@ -1,5 +1,5 @@
 ---
-title: "Multicore Processin"
+title: "GitHub"
 author: "Julien Brun"
 date: "June, 2016"
 output: html_document

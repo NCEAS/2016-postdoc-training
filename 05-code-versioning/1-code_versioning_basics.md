@@ -5,7 +5,7 @@
 
 ## Why do I need that again?
 
-Well let's start with a great example:
+Well let's start with a great example of why versioning can help:
 
 <img style="align: left;width: 420px;" src=images/phd_comics_final.png />
 

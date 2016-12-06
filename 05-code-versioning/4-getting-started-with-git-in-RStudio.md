@@ -1,3 +1,10 @@
+---
+title: "using git From RStudio"
+author: "Julien Brun"
+date: "June, 2016"
+output: html_document
+---
+
 <img style="align: left;width: 300px;" src=images/NCEAS_logo.png />
 
 # Code Versioning using RStudio
