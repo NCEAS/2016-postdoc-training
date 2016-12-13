@@ -92,7 +92,7 @@ while (i < 10) {
 
 # Learning the apply family of functions
 
-As we discuss previously R is built to work with vectors. The family of `apply` functions has been build to leverage vectorized operations that lower the explicit nee of `for` loops. Note that apply functions are in fact C for loops (faster).
+As we discuss previously R is built to work with vectors. The family of `apply` functions has been build to leverage vectorized operations that lower the explicit need of `for` loops. Note that apply functions are in fact C for loops (faster).
 
 These include:
 
