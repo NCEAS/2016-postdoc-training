@@ -10,7 +10,7 @@ This intensive 4-day workshop on *Computational and Collaboration Skills for Int
 * Create a greater sense of SNAPP community identity among the postdocs
 * Foster potential collaboration and enhanced knowledge-sharing across SNAPP Working Groups
 * Familiarize and instruct researchers in the use of NCEAS (and other) cyberinfrastructures and services
-* Clarify and reinforce commitment to open science
+* Clarify and reinforce commitment to open science 
  
 
 ## Agenda shared
