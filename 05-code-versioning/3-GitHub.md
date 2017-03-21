@@ -1,9 +1,3 @@
----
-title: "GitHub"
-author: "Julien Brun"
-date: "June, 2016"
-output: html_document
----
 
 <img style="align: left;width: 300px;" src=images/NCEAS_logo.png />
 
@@ -74,7 +68,7 @@ If you do not have an NCEAS account you can create one [here](https://identity.n
 
 * Select the appropriate Permission level. We recommend Write or Admin. Admin allows people to also add collaborators. 
 
-![image alt text](images/image_14.png)
+<img style="align: left;width: 250px;" src=images/image_14.png />
 
 
 ## Collaborating through Forking
@@ -91,9 +85,12 @@ By using GitHub's `@mention` syntax in your Pull Request message, you can ask fo
 # References
 
 - GitHub:
+
  - guides on how to use GitHub: [https://guides.github.com/](https://guides.github.com/)
  - GitHub from RStudio: [http://r-pkgs.had.co.nz/git.html#git-pull](http://r-pkgs.had.co.nz/git.html#git-pull)
+
 - Forking:
+
  - [https://help.github.com/articles/fork-a-repo/](https://help.github.com/articles/fork-a-repo/)
  - [https://guides.github.com/activities/forking/](https://guides.github.com/activities/forking/)
 
