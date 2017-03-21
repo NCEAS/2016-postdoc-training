@@ -81,10 +81,10 @@ Don't forget **`group by`**!! group_by() groups data by categorical levels and c
 
 ## ![challenge](images/challengeproblemred_scribble.png) Challenge
 
-###1. Use this script to investigate the popularity of your name!
+### 1. Use this script to investigate the popularity of your name!
 
 
-###2. Housing market
+### 2. Housing market
 
 Zillow is a website providing information about houses for sale. It also collects a lot of data on real estate market. These data are available [here](http://www.zillow.com/research/data/). 
 
